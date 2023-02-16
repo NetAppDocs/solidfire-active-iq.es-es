@@ -1,0 +1,412 @@
+---
+permalink: task-active-iq-alerts.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, alerts 
+summary: Obtenga información sobre las tareas relacionadas con las alertas en SolidFire Active IQ. 
+---
+= Alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En el menú desplegable *Alertas* de *All Clusters View*, puede ver el historial de alertas, crear y administrar directivas de alerta y ver y suprimir notificaciones de clúster.
+
+Obtenga más información o realice tareas relacionadas con las alertas:
+
+* <<Ver el historial de alertas>>
+* <<Detalles del historial de alertas>>
+* <<Ver políticas de alerta>>
+* <<create_alert_policy,Cree una política de alerta>>
+* <<alert_policy_types,Tipos de políticas de alerta>>
+* <<Editar una política de alerta>>
+* <<Eliminar una política de alerta>>
+* <<Permite ver clústeres suprimidos>>
+* <<Suprimir notificaciones de clúster>>
+* <<Supresión de clúster final de un clúster>>
+* <<Correo electrónico de notificación de alertas>>
+
+
+
+
+== Ver el historial de alertas
+
+Puede ver el historial de alertas sin resolver o resueltas.
+
+.Pasos
+. Seleccione *Alertas* > *Historial*.
+. Seleccione la ficha *sin resolver* o *resuelto* para ver el historial de alertas del clúster.
+. (Opcional) Seleccione la image:export_button.PNG["Botón Exportar"] Para exportar los datos a un archivo CSV.
+
+
+
+
+== Detalles del historial de alertas
+
+La página *Historial* del menú desplegable Alertas de la vista todos los clústeres muestra hasta 10000 entradas del historial de alertas, incluidas todas las alertas y alertas no resueltas en los últimos 30 días.
+
+La lista siguiente describe los detalles que tienen a su disposición:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID de alerta | ID único de cada alerta. 
+
+
+| Activado | La hora a la que se activó la alerta en SolidFire Active IQ, no en el clúster mismo. 
+
+
+| Última notificación | Hora en la que se ha enviado el correo electrónico de alerta más reciente. 
+
+
+| Resuelto | Muestra si se ha resuelto la causa de la alerta. 
+
+
+| Tiempo de resolución | Tiempo en el que se resolvió un problema. 
+
+
+| Política | Este es el nombre de la política de alerta definido por el usuario. 
+
+
+| Gravedad | Gravedad asignada en el momento en que se creó la política de alerta. 
+
+
+| Destino | La dirección o las direcciones de correo electrónico seleccionadas para recibir el correo electrónico de alerta. 
+
+
+| Empresa | Nombre del cliente asociado a la alerta. 
+
+
+| Clúster | Muestra el nombre del clúster para el que se añadió la política de alertas. 
+
+
+| Disparador | Configuración definida por el usuario que activó la alerta. 
+|===
+
+
+== Ver políticas de alerta
+
+La página *Directivas* del menú desplegable *Alertas* en *All Clusters View* muestra la siguiente información de directiva para todos los clústeres.
+
+La lista siguiente describe los detalles que tienen a su disposición:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| Nombre de la directiva | Nombre de la política de alertas definida por el usuario. 
+
+
+| Destino | La dirección de correo electrónico definida en la política de alertas. 
+
+
+| Gravedad | Gravedad asignada en la política de alerta. 
+
+
+| De clúster | El número y el nombre de cada clúster definido en la política de alertas. Seleccione el icono de información para ver los clústeres asociados. 
+
+
+| Condición | Configuración definida por el usuario para cuándo se debe activar una alerta. 
+
+
+| Tipos de supresión  a| 
+Determina qué alertas y eventos se suprimen. Son posibles los siguientes tipos:
+
+* *Completo*: Todas las alertas del clúster se suprimen durante el tiempo especificado. No se generan casos de soporte ni alertas por correo electrónico.
+* *Actualizaciones*: Las alertas de clúster no críticas se suprimen durante el tiempo especificado. Las alertas cruciales aún generan casos de soporte y correos electrónicos.
+* *Compute*: Se suprimen las alertas activadas por VMware en los nodos informáticos.
+* *Nodehardware*: Las alertas asociadas al mantenimiento de nodos se suprimen. Por ejemplo, para cambiar las unidades o desconectar los nodos.
+* *Unidad*: Las alertas asociadas con el estado de la unidad se suprimen.
+* *Red*: Las alertas asociadas con la configuración de red y el estado se suprimen.
+* *Alimentación*: Las alertas de redundancia de energía están suprimidas. No suprime una alerta _nodeOffline_ que se produce en el caso de una pérdida total de alimentación.
+
+
+
+
+| Acciones | Seleccione el menú desplegable vertical para las opciones de edición y eliminación de la directiva seleccionada. 
+|===
+
+
+== Cree una política de alerta
+
+Puede crear una directiva de alerta para supervisar la información desde la *vista todos los clústeres* de SolidFire Active IQ. Las políticas de alerta permiten recibir notificaciones de un estado o evento de rendimiento con uno o más clústeres en una instalación de modo que se puedan realizar acciones antes o en respuesta a un evento más grave.
+
+.Pasos
+. Seleccione *Alertas* > *políticas*.
+. Seleccione *Crear directiva*.
+. Seleccione un tipo de alerta en la lista *Tipo de directiva*. Consulte <<alert_policy_types,Tipos de políticas de alerta>>.
++
+
+NOTE: Hay campos específicos de la directiva adicionales en el cuadro de diálogo *Crear directiva* dependiendo del tipo de directiva seleccionado.
+
+. Escriba un nombre para la nueva política de alerta.
++
+
+NOTE: Los nombres de las políticas de alerta deben describir la condición para la que se está creando la alerta. Los títulos descriptivos ayudan a identificar la alerta fácilmente. Los nombres de directivas de alertas se muestran como referencia en cualquier parte del sistema.
+
+. Seleccione un nivel de gravedad.
++
+
+TIP: Los niveles de gravedad de la directiva de alertas están codificados por colores y se pueden filtrar fácilmente desde la página *Alertas* > *Historial*.
+
+. Determine el tipo de supresión de la directiva de alerta seleccionando un tipo de *tipos soportables*. Puede seleccionar más de un tipo.
++
+Confirmar que las asociaciones tienen sentido. Por ejemplo, ha seleccionado *supresión de red* para una directiva de alerta de red.
+
+. Seleccione uno o varios clústeres para incluirlos en la política.
++
+
+CAUTION: Cuando se añade un nuevo clúster a la instalación después de crear la política, el clúster no se agregará automáticamente a las políticas de alerta existentes. Debe editar una política de alerta existente y seleccionar el nuevo clúster que desea asociar a la política.
+
+. Introduzca una o más direcciones de correo electrónico a las cuales se enviarán las notificaciones de alerta. Si va a introducir varias direcciones, debe usar una coma para separar cada dirección.
+. Seleccione *Guardar directiva de alerta*.
+
+
+
+
+== Tipos de políticas de alerta
+
+Puede crear directivas de alerta basadas en los tipos de directivas disponibles que aparecen en el cuadro de diálogo *Crear directiva* desde *Alarmas* > *Directivas*.
+
+Las alertas de políticas disponibles incluyen los siguientes tipos:
+
+[cols="25,75"]
+|===
+| Tipo de directiva | Descripción 
+
+
+| Fallo del clúster | Envía una notificación cuando se produce un error de un tipo concreto o de cualquier tipo del clúster. 
+
+
+| Evento | Envía una notificación cuando se produce un tipo de evento específico. 
+
+
+| Unidad con error | Envía una notificación cuando se produce un fallo de la unidad. 
+
+
+| Unidad disponible | Envía una notificación cuando una unidad está en línea en el estado _Available_. 
+
+
+| Uso del clúster | Envía una notificación cuando la capacidad y el rendimiento del clúster que se están usando son mayores que el porcentaje especificado. 
+
+
+| El espacio utilizable | Envía una notificación cuando el espacio útil del clúster es inferior a un porcentaje especificado. 
+
+
+| Espacio de aprovisionamiento | Envía una notificación cuando el espacio de clúster aprovisionable es inferior a un porcentaje especificado. 
+
+
+| El recolector no está informando | Envía una notificación cuando el recopilador para SolidFire Active IQ que se ejecuta en el nodo de gestión no puede enviar datos a SolidFire Active IQ durante la duración especificada. 
+
+
+| Desgaste de la unidad | Envía una notificación cuando una unidad de un clúster tiene menos de un porcentaje especificado de espacio restante o de deterioro. 
+
+
+| Sesiones iSCSI | Envía una notificación cuando el número de sesiones iSCSI activas es mayor que el valor especificado. 
+
+
+| Flexibilidad del chasis | Envía una notificación cuando el espacio usado de un clúster es mayor que el porcentaje especificado por el usuario. Debe seleccionar un porcentaje que sea suficiente para dar un aviso previo antes de alcanzar el umbral de resiliencia del clúster. Después de alcanzar este umbral, un clúster ya no se puede recuperar de forma automática tras un fallo en el nivel de chasis. 
+
+
+| Alarma de VMware | Envía una notificación cuando se activa una alarma de VMware y se notifica a SolidFire Active IQ. 
+
+
+| Resiliencia de dominio de protección personalizada | Cuando el espacio utilizado aumenta más allá del porcentaje especificado de umbral de resiliencia del dominio de protección personalizado, el sistema envía una notificación. Si este porcentaje llega a 100, el clúster de almacenamiento no tiene suficiente capacidad libre para recuperarse tras un fallo del dominio de protección personalizado. 
+
+
+| Archivos de núcleo/volcado de bloqueo del nodo | Cuando un servicio deja de responder y debe reiniciarse, el sistema crea un archivo de núcleo o un archivo de volcado de bloqueo y envía una notificación. Este no es el comportamiento esperado durante las operaciones regulares. 
+|===
+
+
+== Editar una política de alerta
+
+Una política de alerta se puede editar para añadir o quitar clústeres de una política o cambiar la configuración de una política adicional.
+
+.Pasos
+. Seleccione *Alertas* > *políticas*.
+. Seleccione el menú para obtener más opciones en *acciones*.
+. Seleccione *Editar directiva*.
++
+
+NOTE: El tipo de directiva y los criterios de supervisión específicos del tipo no se pueden editar.
+
+. (Opcional) Escriba un nombre revisado para la nueva política de alerta.
++
+
+NOTE: Los nombres de las políticas de alerta deben describir la condición para la que se está creando la alerta. Los títulos descriptivos ayudan a identificar la alerta fácilmente. Los nombres de directivas de alertas se muestran como referencia en cualquier parte del sistema.
+
+. (Opcional) Seleccione un nivel de gravedad diferente.
++
+
+TIP: Los niveles de gravedad de la política de alertas están codificados mediante colores y pueden filtrarse fácilmente desde la página Alertas > Historial.
+
+. Determine el tipo de supresión de la directiva de alerta cuando está activa seleccionando un tipo de *tipos soportables*. Puede seleccionar más de un tipo.
++
+Confirmar que las asociaciones tienen sentido. Por ejemplo, ha seleccionado *supresión de red* para una directiva de alerta de red.
+
+. (Opcional) Seleccione o elimine asociaciones de clústeres con la política.
++
+
+CAUTION: Cuando se añade un nuevo clúster a la instalación después de crear la política, el clúster no se agrega automáticamente a las políticas de alerta existentes. Debe seleccionar el nuevo clúster que desea asociar a la política.
+
+. (Opcional) modifique una o varias direcciones de correo electrónico a las que se enviarán las notificaciones de alerta. Si va a introducir varias direcciones, debe usar una coma para separar cada dirección.
+. Seleccione *Guardar directiva de alerta*.
+
+
+
+
+== Eliminar una política de alerta
+
+Al eliminar una política de alerta, esta se quita de forma permanente del sistema. Las notificaciones por correo electrónico ya no se envían para esa política y las asociaciones de clúster con la política se eliminan.
+
+.Pasos
+. Seleccione *Alertas* > *políticas*.
+. En *acciones*, seleccione el menú para obtener más opciones.
+. Seleccione *Eliminar directiva*.
+. Confirme la acción.
++
+La directiva se elimina del sistema de forma permanente.
+
+
+
+
+
+== Permite ver clústeres suprimidos
+
+En la página *clústeres suprimidos* del menú desplegable *Alertas* dentro de la *Vista todos los clústeres*, puede ver una lista de clústeres que tienen notificaciones de alerta suprimidas.
+
+El soporte de NetApp o los clientes pueden suprimir notificaciones de alerta para un clúster al realizar mantenimiento. Cuando las notificaciones se suprimen para un clúster mediante la supresión de actualizaciones, no se envían alertas comunes que ocurren durante las actualizaciones. También hay una opción de supresión de alerta completa que detiene la notificación de alerta de un clúster durante un periodo especificado. Puede ver cualquier alerta de correo electrónico que no se envíe cuando se supriman las notificaciones en la página *Historial* del menú *Alertas*. Las notificaciones suprimidas se reanudan automáticamente después de que transcurra la duración definida. Puede finalizar la supresión temprana de las notificaciones seleccionando "reanudar notificaciones" en el menú desplegable.
+
+La siguiente información está disponible en la página *clústeres suprimidos*.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| Empresa | El nombre de la empresa asignado al clúster. 
+
+
+| ID del clúster | El número de clúster asignado cuando se crea el clúster. 
+
+
+| Nombre del clúster | El nombre asignado al clúster. 
+
+
+| Hora de inicio | La hora exacta a la que se inició la supresión de notificaciones o está programada para iniciarse. 
+
+
+| Hora de fin | El tiempo exacto en el que está programado que finalice la supresión de las notificaciones 
+
+
+| Tipo  a| 
+Determina qué alertas y eventos se suprimen. Son posibles los siguientes tipos:
+
+* *Completo*: Todas las alertas del clúster se suprimen durante el tiempo especificado. No se generan casos de soporte ni alertas por correo electrónico.
+* *Actualizaciones*: Las alertas de clúster no críticas se suprimen durante el tiempo especificado. Las alertas cruciales aún generan casos de soporte y correos electrónicos.
+* *Compute*: Se suprimen las alertas activadas por VMware en los nodos informáticos.
+* *Nodehardware*: Las alertas asociadas al mantenimiento de nodos se suprimen. Por ejemplo, para cambiar las unidades o desconectar los nodos.
+* *Unidad*: Las alertas asociadas con el estado de la unidad se suprimen.
+* *Red*: Las alertas asociadas con la configuración de red y el estado se suprimen.
+* *Alimentación*: Las alertas de redundancia de energía están suprimidas. No suprime una alerta _nodeOffline_ que se produce en el caso de una pérdida total de alimentación.
+
+
+
+
+| Estado  a| 
+Indica el estado de una notificación de alerta:
+
+* *Activo*: Supresión de notificaciones de alerta activa.
+* *Futuro*: La supresión de notificaciones de alerta está programada para una fecha y hora futuras.
+
+
+
+
+| Acciones | Seleccione la opción para suprimir o reanudar notificaciones para un clúster. 
+|===
+
+
+== Suprimir notificaciones de clúster
+
+Puede suprimir notificaciones de alerta en el nivel del clúster para un solo clúster o varios clústeres para la fecha y la hora actuales o la programación para que comiencen en una fecha y hora futuras.
+
+.Pasos
+. Debe realizar una de las siguientes acciones:
++
+.. En la descripción general de *Dashboard*, seleccione el menú acciones del clúster que desea suprimir.
+.. En *Alertas* > *supresión de clúster*, seleccione *clústeres de supresión*.
+
+
+. En el cuadro de diálogo *Suprimir alertas para clúster*, haga lo siguiente:
++
+.. Si ha seleccionado el botón *Suppress Clusters* en la página *clústeres suprimidos*, seleccione un clúster.
+.. Seleccione un tipo de supresión de alertas como *Full*, *Upgrades*, *Compute*, *Nodehardware*, *Drive*, *Red* o *Alimentación*. <<suppressed_types,Obtenga información sobre los tipos de supresión>>.
++
+
+NOTE: Un clúster puede tener varios tipos de supresión, que pueden incluir varias selecciones del mismo tipo de supresión. Cuando ya existe un tipo de supresión durante una ventana de supresión programada, aparece atenuado. Para volver a seleccionar este tipo de supresión, seleccione *superposición existente*. Varias selecciones del mismo tipo de supresión pueden tener tiempos de superposición o, si se programan futuras supresiones, pueden ser en momentos diferentes. Cuando dos supresiones tienen períodos de tiempo superpuestos, la funcionalidad es la misma que tener una sola supresión con una hora de inicio comenzando en la primera de las supresiones y una hora de finalización a más tardar.
+
+.. Seleccione la fecha y la hora de inicio que desea que se inicie la supresión de las notificaciones.
+.. Seleccione una duración común o introduzca una fecha y hora de finalización personalizadas durante las cuales se deben suprimir las notificaciones.
+
+
+. Seleccione *Suprimir*.
++
+
+NOTE: Esta acción también suprime algunas o todas las notificaciones al soporte de NetApp. Una vez que se aplique la supresión del clúster, el soporte de NetApp o cualquier usuario que tenga derecho a ver el clúster puede actualizar el estado de supresión.
+
+
+
+
+
+== Supresión de clúster final de un clúster
+
+Puede finalizar la supresión de alertas de clúster en los clústeres que se aplicaron mediante la función Suppress Clusters. Esto permite que los clústeres reanuden su estado normal de generación de informes de alerta.
+
+.Pasos
+. Desde *Dashboard* general o *Alertas* > *supresión de clúster*, supresión de fin para los clústeres únicos o múltiples que desea reanudar los informes de alerta normales:
++
+.. Para un único clúster, seleccione el menú acciones del clúster y seleccione *terminar supresión*.
+.. Para varios clústeres, seleccione los clústeres y, a continuación, seleccione *terminar las supresiones seleccionadas*.
+
+
+
+
+
+
+== Correo electrónico de notificación de alertas
+
+Los suscriptores de las alertas de SolidFire Active IQ reciben diferentes correos electrónicos de estado para cada alerta que se activa en el sistema. Hay tres tipos de correos electrónicos de estado asociados a las alertas:
+
+[cols="35,65"]
+|===
+
+
+| Nuevo correo electrónico de alerta | Este tipo de correo electrónico se envía cuando se activa una alerta. 
+
+
+| Correo electrónico de alerta de recordatorio | Este tipo de correo electrónico se envía una vez cada 24 horas mientras la alerta permanece activa. 
+
+
+| Correo electrónico de alerta resuelta | Este tipo de correo electrónico se envía cuando se resuelve el problema. 
+|===
+Después de crear una política de alerta y de generar una alerta nueva para esta política, se envía un correo electrónico a la dirección de correo electrónico designada (consulte <<create_alert_policy,Cree una directiva de alerta>>).
+
+La línea de asunto del correo electrónico de alerta utiliza uno de los siguientes formatos, según el tipo de error notificado:
+
+* Fallo sin resolver del clúster: `[cluster fault code] fault on [cluster name] ([severity])`
+* Fallo resuelto del clúster: `Resolved: [cluster fault code] fault on [cluster name] ([severity])`
+* Alerta sin resolver: `[policy name] alert on [cluster name] ([severity])`
+* Error de alerta resuelto: `Resolved: [policy name] alert on [cluster name] ([severity])`
+
+
+El contenido del correo electrónico de notificación será similar al siguiente ejemplo:image:example_email.PNG["Correo electrónico de ejemplo"]
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

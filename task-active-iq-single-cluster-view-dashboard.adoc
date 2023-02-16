@@ -1,0 +1,122 @@
+---
+permalink: task-active-iq-single-cluster-view-dashboard.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, dashboard, single, cluster 
+summary: Obtenga información acerca de la página Dashboard de un clúster seleccionado en SolidFire Active IQ. 
+---
+= Una única consola con vista del clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la página *Dashboard* de un clúster seleccionado, puede ver detalles de clúster de alto nivel, incluidos el rendimiento, la capacidad y la utilización de la computación.
+
+Seleccione el menú desplegable *Mostrar detalles* para ver más información sobre el clúster o seleccione image:more_details.PNG["Más detalles"] icono junto a un encabezado para obtener información más detallada sobre los informes. También se puede mover el puntero del ratón por las líneas de los gráficos y los datos de los informes para ver más información.
+
+Los detalles disponibles varían en función de su sistema:
+
+* <<Y almacenamiento únicamente>>
+* <<Información general del sistema NetApp HCI>>
+
+
+
+
+== Y almacenamiento únicamente
+
+Para una solución basada en almacenamiento de SolidFire, puede ver información detallada y de rendimiento específica de su clúster cuando selecciona *Mostrar detalles* en la página *Panel*.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| Barra de información | Esta barra superior proporciona una descripción general rápida del estado actual del clúster seleccionado. La barra muestra el número de nodos, la cantidad de volúmenes, los detalles de fallos, las estadísticas en tiempo real sobre la eficiencia y el estado sobre el bloque y la capacidad de metadatos. Los enlaces de esta barra se abren a los datos correspondientes de la interfaz de usuario. 
+
+
+| Detalles del clúster  a| 
+Expanda la barra de información seleccionando *Mostrar detalles* para mostrar estos valores:
+
+* Versión de Element
+* Sesiones iSCSI
+* Sesiones Fibre Channel
+* IOPS total configurada máxima
+* Número máx. De IOPS total
+* Tipos de nodo
+* Cifrado en reposo
+* VVol
+* Total mín. De IOPS configurado
+
+
+
+
+| Rendimiento | Este gráfico muestra el uso de IOPS y el rendimiento. 
+
+
+| Capacidad  a| 
+En ella se muestra el estado y la ocupación del clúster de la instalación:
+
+* Provisioned: La capacidad total de todos los volúmenes que se crearon en el sistema.
+* Físico: La cantidad total de capacidad física (capacidad de datos en bloque total) del sistema para almacenar los datos (después de aplicar todas las eficiencias).
+* Capacidad de bloques: La cantidad de capacidad de datos de bloques actualmente en uso.
+* Capacidad de metadatos: La cantidad de capacidad de metadatos actualmente en uso.
+* Eficiencias: La cantidad de eficiencias que el sistema está experimentando debido a la compresión, la deduplicación y thin provisioning.
+
+
+|===
+
+
+== Información general del sistema NetApp HCI
+
+Para una solución basada en HCI de NetApp, puede ver detalles e información de rendimiento específica del clúster cuando selecciona *Mostrar detalles* en la página *Consola*.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| Barra de información | Esta barra superior proporciona una descripción general rápida del estado actual del clúster seleccionado. La barra muestra la cantidad de nodos de computación y de almacenamiento, el estado de computación, el estado de almacenamiento, el número de máquinas virtuales y el número de volúmenes asociados con el sistema NetApp HCI. Los enlaces de esta barra se abren a los datos correspondientes de la interfaz de usuario. 
+
+
+| Detalles de la instalación  a| 
+Expanda la barra de información seleccionando *Mostrar detalles* para mostrar estos valores:
+
+* Versión de Element
+* Hipervisor
+* Instancia de vCenter asociada
+* Centro de datos asociado
+* IOPS total configurada máxima
+* Número máx. De IOPS total
+* Los tipos de nodos de computación
+* Los tipos del nodo de almacenamiento
+* Cifrado en reposo
+* VVol
+* Sesiones iSCSI
+* Total mín. De IOPS configurado
+
+
+
+
+| Utilización de informática | El uso de la CPU y la memoria se representan en este gráfico. 
+
+
+| Capacidad de almacenamiento  a| 
+En ella se muestra el estado y la ocupación del clúster de la instalación:
+
+* Provisioned: La capacidad total de todos los volúmenes que se crearon en el sistema.
+* Físico: La cantidad total de capacidad física (capacidad de datos en bloque total) del sistema para almacenar los datos (después de aplicar todas las eficiencias).
+* Capacidad de bloques: La cantidad de capacidad de datos de bloques actualmente en uso.
+* Capacidad de metadatos: La cantidad de capacidad de metadatos actualmente en uso.
+* Eficiencias: La cantidad de eficiencias que el sistema está experimentando debido a la compresión, la deduplicación y thin provisioning.
+
+
+
+
+| Rendimiento del almacenamiento | Las IOPS y el rendimiento se representan en este gráfico. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

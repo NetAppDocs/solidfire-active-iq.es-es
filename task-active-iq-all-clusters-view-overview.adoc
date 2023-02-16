@@ -1,0 +1,28 @@
+---
+permalink: task-active-iq-all-clusters-view-overview.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, all, clusters, view 
+summary: Obtenga información sobre la página Ver todos los clústeres en SolidFire Active IQ. 
+---
+= Vista todos los clústeres
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La *Vista de todos los clusters* es la página de destino de SolidFire Active IQ.
+
+Obtenga más información sobre a qué se puede acceder desde la *Vista de todos los clústeres*:
+
+* link:task-active-iq-all-clusters-view-dashboard.html["Consola Ver todos los clústeres"]
+* link:task-active-iq-alerts.html["Alertas"]
+* link:task-active-iq-capacity-licensing.html["Licencias por capacidad"]
+* link:task-active-iq-term-capacity.html["Capacidad a plazo"]
+
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

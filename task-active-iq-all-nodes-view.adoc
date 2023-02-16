@@ -1,0 +1,181 @@
+---
+permalink: task-active-iq-all-nodes-view.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, all, throttling, throttled 
+summary: Obtenga información sobre la página Ver todos los nodos en SolidFire Active IQ. 
+---
+= Vista de todos los nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede ver información sobre todos los nodos de una empresa, incluidos los nodos de aceleración, cuando seleccione el nombre de la empresa en la lista desplegable *All Nodes View*. Después de seleccionar el nombre de la compañía, sustituye *todos los nodos Ver* en la barra de navegación superior.
+
+
+NOTE: Si su cuenta de SolidFire Active IQ sólo tiene asociado un nombre de empresa, las páginas *todos los nodos* y *nodos estrangulados*, disponibles en el panel lateral, tienen por defecto el nombre de la empresa.
+
+Obtenga más información sobre las páginas todos los nodos y nodos acelerando:
+
+* <<Permite ver información sobre todos los nodos>>
+* <<Vea información sobre los nodos aceleran>>
+
+
+
+
+== Permite ver información sobre todos los nodos
+
+En la página *todos los nodos*, disponible en el panel lateral, puede ver información sobre todos los nodos de la compañía seleccionada.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID del clúster | El número de clúster asignado cuando se crea el clúster. 
+
+
+| Clúster | El nombre asignado al clúster. 
+
+
+| ID de nodo | El ID que genera el sistema para el nodo. 
+
+
+| Estado  a| 
+El estado del nodo:
+
+* Healthy: El nodo no tiene errores críticos asociados.
+* Offline: No se puede acceder al nodo. Seleccione el vínculo para ver el registro de errores.
+* Falla: Existen errores asociados con este nodo. Seleccione el vínculo para ver el registro de errores.
+
+
+
+
+| Nombre | El nombre del nodo que genera el sistema. 
+
+
+| Tipo | Muestra el tipo de modelo del nodo. 
+
+
+| Número de serie | El número de serie único que se asigna al nodo. 
+
+
+| Versión | La versión del software Element que se ejecuta en el nodo. 
+
+
+| IP de gestión | La dirección IP de gestión asignada al nodo para tareas de administrador de red 1 GbE o 10 GbE. 
+
+
+| IP de almacenamiento | La dirección IP de almacenamiento asignada al nodo que se usa para la detección de redes iSCSI y todo el tráfico de red de datos. 
+
+
+| Función  a| 
+Identifica el rol que tiene el nodo en el clúster:
+
+* Cluster Master: El nodo que realiza tareas administrativas para todo el clúster y contiene la dirección IP virtual de gestión y la dirección IP virtual de almacenamiento.
+* Ensemble Node: Un nodo que participa en el clúster. Hay tres o cinco nodos de conjuntos, según el tamaño del clúster.
+* Fibre Channel: Un nodo FC en el clúster.
+* Si un nodo no tiene un rol, el valor se establece en - (guion).
+
+
+|===
+
+
+== Vea información sobre los nodos aceleran
+
+En la página *nodos estrangulados*, disponible en el panel lateral, puede ver información de todos los nodos con aceleración superior al 1% en los últimos 30 días para su empresa seleccionada.
+
+Tiene la opción de ver nodos con un tiempo de regulación *alto*, *limitado* o *combinado* (alto y limitado). También puede ver descripciones de la tabla de limitación de nodos y las opciones de limitación alta, limitada y combinada seleccionando la image:description.PNG["descripción"] icono, como se muestra en el siguiente ejemplo:
+
+image:throttled_nodes.PNG["Descripciones de la página de nodos acelerados y de tiempos de aceleración"]
+
+Obtenga más información sobre la información disponible para los nodos aceleran.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID del clúster | El número de clúster asignado cuando se crea el clúster. 
+
+
+| Clúster | El nombre asignado al clúster. 
+
+
+| ID de nodo | El ID que genera el sistema para el nodo. 
+
+
+| Nombre | El nombre del nodo que genera el sistema. 
+
+
+| Tipo | Muestra el tipo de modelo del nodo. 
+
+
+| Versión | La versión del software Element que se ejecuta en el nodo. 
+
+
+ a| 
+*Vista de tiempo de aceleración alta*
+
+
+
+| Acelerador alto las últimas 24 horas | El porcentaje de limitación de nodo alta en las últimas 24 horas. 
+
+
+| Acelerador alto los últimos 7 días | El porcentaje de limitación de nodo alta en los últimos 7 días. 
+
+
+| Acelerador alto los últimos 14 días | El porcentaje de limitación de nodo alta en los últimos 14 días. 
+
+
+| Acelerador alto los últimos 30 días | El porcentaje de limitación de nodo alta en los últimos 30 días. 
+
+
+ a| 
+*Vista de tiempo limitado de desaceleramiento*
+
+
+
+| Acelerador limitado las últimas 24 horas | El porcentaje de limitación de la limitación de nodos en las últimas 24 horas. 
+
+
+| Acelerador limitado últimos 7 días | El porcentaje de limitación de nodos en los últimos 7 días. 
+
+
+| Acelerador limitado últimos 14 días | El porcentaje de limitación de nodos en los últimos 14 días. 
+
+
+| Acelerador limitado últimos 30 días | El porcentaje de limitación de nodos en los últimos 30 días. 
+
+
+ a| 
+*Vista de tiempo de aceleración combinada*
+
+
+
+| Acelerador combinado las últimas 24 horas | El porcentaje de limitación de nodos combinados en las últimas 24 horas. 
+
+
+| Acelerador combinado los últimos 7 días | El porcentaje de limitación combinada de nodos en los últimos 7 días. 
+
+
+| Acelerador combinado los últimos 14 días | El porcentaje de limitación combinada de nodos en los últimos 14 días. 
+
+
+| Acelerador combinado los últimos 30 días | El porcentaje de limitación combinada de nodos en los últimos 30 días. 
+
+
+| Rendimiento medio en los últimos 30 minutos | Suma del rendimiento medio ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como primario. 
+
+
+| IOPS promedio en los últimos 30 minutos | Suma del número medio de IOPS ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como principal. 
+
+
+| Latencia media (µs): Últimos 30 minutos | Tiempo medio en microsegundos, medido en los últimos 30 minutos, para completar las operaciones de lectura y escritura en todos los volúmenes que tienen este nodo como principal. Para informar esta métrica en función de los volúmenes activos, solo se utilizan valores de latencia no cero. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

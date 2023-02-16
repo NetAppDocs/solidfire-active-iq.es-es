@@ -1,0 +1,114 @@
+---
+permalink: task-active-iq-view-hci-node-details.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, hci, compute, storage, nodes 
+summary: Obtenga información sobre la visualización de detalles de nodos NetApp HCI en SolidFire Active IQ. 
+---
+= Consulte los detalles de los nodos de computación y almacenamiento de NetApp HCI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para los nodos H-Series de NetApp, que conforman un sistema de NetApp HCI de, existen dos tipos: Nodos de almacenamiento y de computación.
+
+En la página *Nodes*, la barra de información proporciona una visión general rápida de los siguientes datos:
+
+* VCenter IP: Dirección IP de vCenter Server
+* MVIP: Dirección IP virtual de gestión
+* SVIP: Dirección IP virtual de almacenamiento
+
+
+
+
+== Ver información sobre los nodos de almacenamiento
+
+Seleccione *almacenamiento* para ver la siguiente información acerca de los nodos de almacenamiento del clúster.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID | El ID que genera el sistema para el nodo. 
+
+
+| Estado  a| 
+El estado del nodo:
+
+* Healthy: El nodo no tiene errores críticos asociados.
+* Offline: No se puede acceder al nodo. Seleccione el vínculo para ver el registro de errores.
+* Falla: Existen errores asociados con este nodo. Seleccione el vínculo para ver el registro de errores.
+
+
+
+
+| Tipo | Muestra el tipo de modelo del nodo. 
+
+
+| Chasis / ranura | El número de serie único asignado al chasis y la ubicación de la ranura del nodo. 
+
+
+| Número de serie | El número de serie único que se asigna al nodo. 
+
+
+| Versión | La versión del software Element que se ejecuta en cada nodo. 
+
+
+| IP de gestión | La dirección IP de gestión asignada al nodo para tareas de administrador de red 1 GbE o 10 GbE. 
+
+
+| IP de almacenamiento | La dirección IP de almacenamiento asignada al nodo que se usa para la detección de redes iSCSI y todo el tráfico de red de datos. 
+
+
+| Función  a| 
+Identifica el rol que tiene el nodo en el clúster:
+
+* Cluster Master: El nodo que realiza tareas administrativas para todo el clúster y contiene la MVIP y la SVIP.
+* Ensemble Node: Un nodo que participa en el clúster. Hay nodos de 3 o 5 conjuntos, según el tamaño del clúster.
+
+
+
+
+| IOPS promedio en los últimos 30 minutos | Suma del número medio de IOPS ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como principal. 
+
+
+| Rendimiento medio en los últimos 30 minutos | Suma del rendimiento medio ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como primario. 
+
+
+| Latencia media (µs): Últimos 30 minutos | Tiempo medio en microsegundos, medido en los últimos 30 minutos, para completar las operaciones de lectura y escritura en todos los volúmenes que tienen este nodo como principal. Para informar esta métrica en función de los volúmenes activos, solo se utilizan valores de latencia no cero. 
+|===
+
+
+== Ver información sobre los nodos de computación
+
+Seleccione *Compute* para ver la siguiente información acerca de los nodos de computación del clúster.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| IP | La dirección IP del nodo de computación. 
+
+
+| Estado del de vCenter | El valor que devuelve VMware. Pase el ratón sobre esto para ver la descripción de VMware. 
+
+
+| Tipo | Muestra el tipo de modelo del nodo. 
+
+
+| Chasis/ranura | El número de serie único asignado al chasis y la ubicación de la ranura del nodo. 
+
+
+| Número de serie | El número de serie único que se asigna al nodo. 
+
+
+| IP de vMotion | La dirección IP de red de VMware vMotion del nodo de computación. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

@@ -1,0 +1,315 @@
+---
+permalink: task-active-iq-reporting-options.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, reporting, cluster 
+summary: Obtenga información acerca de las opciones de generación de informes para un clúster seleccionado en SolidFire Active IQ. 
+---
+= Opciones de generación de informes para un clúster seleccionado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Obtenga más información sobre el menú desplegable *Informes* en el panel lateral:
+
+* <<Capacidad>>
+* <<Eficiencia>>
+* <<Rendimiento>>
+* <<Registro de errores>>
+* <<Eventos>>
+* <<Alertas>>
+* <<Sesiones iSCSI>>
+* <<Redes virtuales>>
+* <<Colección API>>
+
+
+
+
+== Capacidad
+
+En la página *capacidad* del menú desplegable *Informes* para un clúster seleccionado, puede ver detalles sobre el espacio general del clúster que se aprovisiona en volúmenes. Las barras de información de la capacidad proporcionan el estado actual y las previsiones de la capacidad de almacenamiento de bloques y metadatos para el clúster. Los gráficos correspondientes proporcionan métodos adicionales para analizar los datos del clúster.
+
+
+NOTE: Para obtener detalles sobre los niveles de gravedad y la ocupación del clúster, consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^].
+
+En las siguientes descripciones se proporcionan detalles sobre la capacidad de bloques, la capacidad de metadatos y el espacio aprovisionado del clúster seleccionado.
+
+[cols="20,35,45"]
+|===
+3+| Capacidad de bloques 
+
+
+| Título | Descripción | Pronóstico 
+
+
+| Capacidad utilizada | La capacidad utilizada actual del bloque de clústeres. | No aplicable 
+
+
+| Umbral de advertencia | El umbral de advertencia actual. | Previsión de cuándo se alcanzará el umbral de advertencia. 
+
+
+| Umbral de error | El umbral de error actual. | Previsión de cuándo se alcanzará el umbral de error. 
+
+
+| Capacidad total | La capacidad total del bloque. | Previsión de cuándo se alcanzará el umbral crítico. 
+
+
+| Estado actual | Estado actual del bloque. | Para obtener más detalles sobre los niveles de gravedad, consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^]. 
+
+
+3+| Capacidad de metadatos 
+
+
+| Título 2+| Descripción 
+
+
+| Capacidad utilizada  a| 
+La capacidad de clúster de metadatos que se usa para este clúster.
+
+
+
+| Capacidad total  a| 
+La capacidad de metadatos total disponible para este clúster y la previsión de umbral crítico.
+
+
+
+| Estado actual  a| 
+El estado actual de la capacidad de metadatos de este clúster.
+
+
+
+3+| Espacio aprovisionado 
+
+
+| Título 2+| Descripción 
+
+
+| Espacio aprovisionado  a| 
+La cantidad de espacio que actualmente se aprovisiona en el clúster.
+
+
+
+| Máximo espacio aprovisionado  a| 
+El espacio máximo que se puede aprovisionar en el clúster.
+
+|===
+
+
+== Eficiencia
+
+En la página *eficiencia* del menú desplegable clúster *Informes* para un clúster seleccionado, puede ver detalles sobre thin provisioning, deduplicación y compresión en el clúster cuando mueve el puntero del ratón sobre los puntos de datos del gráfico.
+
+
+NOTE: Todas las eficiencias combinadas se calculan mediante una multiplicación simple de los valores de factor notificados.
+
+Las siguientes descripciones proporcionan detalles sobre las eficiencias calculadas en el clúster seleccionado.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| Eficiencia general | La eficiencia global del aprovisionamiento ligero, la deduplicación y la compresión multiplicada entre sí. Estos cálculos no tienen en cuenta la operación de hélice doble integrada en el sistema. 
+
+
+| Deduplicación y compresión | El efecto combinado del espacio ahorrado mediante deduplicación y compresión. 
+
+
+| Aprovisionamiento ligero | Cantidad de espacio ahorrado con esta función. Esta cantidad refleja el delta entre la capacidad asignada para el clúster y la cantidad de datos realmente almacenados. 
+
+
+| Deduplicación | El multiplicador de relación de la cantidad de espacio que se guardó al no almacenar datos duplicados en el clúster. 
+
+
+| Compresión | El efecto de la compresión de datos en los datos almacenados en el clúster. Los diferentes tipos de datos se comprimen a diferentes velocidades. Por ejemplo, los datos de texto y la mayoría de los documentos se comprimen fácilmente en un espacio más pequeño, pero las imágenes de vídeo y gráficas normalmente no lo hacen. 
+|===
+
+
+== Rendimiento
+
+En la página *rendimiento* del menú desplegable *Informes* de un clúster seleccionado, puede ver detalles sobre el uso de IOPS, el rendimiento y el uso del clúster seleccionando la categoría y el filtrado en función del período de tiempo.
+
+
+
+== Registro de errores
+
+En la página *Registro de errores* del menú desplegable *Informes* de un clúster seleccionado, puede ver información sobre los errores resueltos o sin resolver que ha informado el clúster. Esta información se puede filtrar y exportar a un archivo de valores separados por comas (CSV). Para obtener más detalles sobre los niveles de gravedad, consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^].
+
+Se informa de la siguiente información para el clúster seleccionado.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID | ID de un error de clúster. 
+
+
+| Fecha | La fecha y la hora en la que se registró el error. 
+
+
+| Gravedad | Esto puede ser una advertencia, un error, crítica o una práctica recomendada. 
+
+
+| Tipo | Puede ser nodo, unidad, clúster, servicio o volumen. 
+
+
+| ID de nodo | ID de nodo para el nodo al que hace referencia este error. Se incluye para los errores de nodo y de unidad; de lo contrario se establece como - (guion). 
+
+
+| Nombre del nodo | El nombre del nodo que genera el sistema. 
+
+
+| ID de unidad | ID de unidad para la unidad a la que hace referencia este error. Se incluye para los errores drive; de lo contrario se establece como - (guion). 
+
+
+| Resuelto | Muestra si se ha resuelto la causa del error. 
+
+
+| Tiempo de resolución | Muestra la hora a la que se resolvió un problema. 
+
+
+| Código de error | Código descriptivo que indica cuál es la causa del error. 
+
+
+| Detalles | Descripción del error con detalles adicionales. 
+|===
+
+
+== Eventos
+
+En la página *Eventos* del menú desplegable *Informes* de un clúster seleccionado, puede ver información sobre los eventos clave que se han producido en el clúster. Esta información se puede filtrar y exportar a un archivo CSV.
+
+Se informa de la siguiente información para el clúster seleccionado.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del evento | ID exclusivo asociado con cada evento. 
+
+
+| Hora del evento | La hora en la que ocurrió el evento. 
+
+
+| Tipo | Tipo de evento que se está registrando; por ejemplo, eventos de API o eventos de clon. Consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^] si quiere más información. 
+
+
+| Mensaje | Mensaje asociado con el evento. 
+
+
+| ID de servicio | El servicio que notificó el evento (si corresponde). 
+
+
+| ID de nodo | El nodo que notificó el evento (si corresponde). 
+
+
+| ID de unidad | La unidad que notificó el evento (si corresponde). 
+
+
+| Detalles | Información que ayuda a identificar por qué ocurre el evento. 
+|===
+
+
+== Alertas
+
+En la página *Alertas* del menú desplegable *Informes* para un clúster seleccionado, puede ver las alertas de clúster no resueltas o no resueltas. Esta información se puede filtrar y exportar a un archivo CSV. Para obtener más detalles sobre los niveles de gravedad, consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^].
+
+Se informa de la siguiente información para el clúster seleccionado.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| Activado | La hora a la que se activó la alerta en SolidFire Active IQ, no en el clúster mismo. 
+
+
+| Última notificación | Hora en la que se ha enviado el correo electrónico de alerta más reciente. 
+
+
+| Resuelto | Muestra si se ha resuelto la causa de la alerta. 
+
+
+| Política | Este es el nombre de la política de alerta definido por el usuario. 
+
+
+| Gravedad | Gravedad asignada en el momento en que se creó la política de alerta. 
+
+
+| Destino | La dirección o las direcciones de correo electrónico seleccionadas para recibir el correo electrónico de alerta. 
+
+
+| Disparador | Configuración definida por el usuario que activó la alerta. 
+|===
+
+
+== Sesiones iSCSI
+
+En la página *sesiones iSCSI* del menú desplegable *Informes* para un clúster seleccionado, puede ver detalles sobre el número de sesiones activas en el clúster y el número de sesiones iSCSI que se han producido en el clúster.
+
+.Expanda el ejemplo de sesiones iSCSI
+[%collapsible]
+====
+image:iscsi_sessions.PNG["Sesiones iSCSI"]
+
+====
+Es posible mover el puntero del ratón por un punto de datos del gráfico para buscar la cantidad de sesiones de un período de tiempo definido:
+
+* Active Sessions: El número de sesiones iSCSI conectadas y activas en el clúster.
+* Peak Active Sessions: El número máximo de sesiones iSCSI que se han producido en el clúster en las últimas 24 horas.
+
+
+
+NOTE: Entre estos datos se incluyen las sesiones iSCSI generadas por los nodos FC.
+
+
+
+== Redes virtuales
+
+En la página *redes virtuales* del menú desplegable *Informes* para un clúster seleccionado, puede ver la siguiente información acerca de las redes virtuales configuradas en el clúster.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID | El ID exclusivo de la red VLAN. Esto lo asigna el sistema. 
+
+
+| Nombre | El nombre exclusivo asignado por el usuario para la red VLAN. 
+
+
+| ID DE VLAN | La etiqueta VLAN que se asignó cuando se creó la red virtual. 
+
+
+| SVIP | La dirección IP virtual de almacenamiento asignada a la red virtual. 
+
+
+| Máscara de red | La máscara de red de esta red virtual. 
+
+
+| Puerta de enlace | La dirección IP exclusiva de una puerta de enlace de red virtual. VRF debe estar habilitado. 
+
+
+| VRF habilitado | Muestra si el enrutamiento y el reenvío virtuales están habilitados. 
+
+
+| IPS utilizado | El rango de direcciones IP de red virtual que se utiliza para la red virtual. 
+|===
+
+
+== Colección API
+
+En la página *API Collection* del menú desplegable *Reporting* para un clúster seleccionado, puede ver los métodos API que utiliza SolidFire Active IQ de NetApp. Para obtener descripciones detalladas de estos métodos, consulte link:https://docs.netapp.com/us-en/element-software/api/index.html["Documentación de API del software Element"^].
+
+
+NOTE: Además de estos métodos, SolidFire Active IQ realiza algunas llamadas API internas que utiliza el equipo de soporte e ingeniería de NetApp para supervisar el estado del clúster. Estas llamadas no se documentan porque pueden provocar interrupciones en el funcionamiento del clúster si se usan de forma incorrecta. Si necesita una lista completa de colecciones API de SolidFire Active IQ, debe ponerse en contacto con el soporte de NetApp.
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

@@ -1,0 +1,59 @@
+---
+permalink: task-active-iq-throttling.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, nodes, throttling 
+summary: Obtenga más información acerca de la página aceleración de nodos en SolidFire Active IQ. 
+---
+= Regulación de nodos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Desde la página *QoS Management* > *Regulación de nodos*, disponible en el panel lateral de un clúster seleccionado, puede ver el porcentaje de limitación de los nodos del clúster. Los nodos se enumeran como diseños de miniaturas en el lado izquierdo de la pantalla y se ordenan en función del grado de aceleración para un intervalo de tiempo seleccionado.
+
+Obtenga información sobre cómo ver la información de limitación de nodo:
+
+* <<Ver gráficos y seleccionar intervalos de fechas>>
+* <<Exportar datos de limitación de nodos>>
+
+
+
+
+== Ver gráficos y seleccionar intervalos de fechas
+
+Los gráficos y los rangos de fechas de SolidFire Active IQ se integran perfectamente entre sí. Al seleccionar un intervalo de fechas, todos los gráficos de esa página se ajustan al rango seleccionado. El rango de fechas predeterminado que se muestra para cada gráfico es siete días.
+
+Puede seleccionar un intervalo de fechas del cuadro desplegable del calendario o de un conjunto de rangos predefinidos. Los intervalos de fechas se calculan utilizando la hora actual del explorador (en el momento de la selección) y la cantidad de tiempo configurada. Además, puede seleccionar el intervalo deseado cepillándose directamente sobre el gráfico de barras en la parte inferior. Puede cambiar entre gráficos seleccionando los diseños de miniaturas a la izquierda.
+
+Los gráficos muestran la aceleración de los nodos durante el período de tiempo seleccionado en función de la configuración de IOPS mínima y máxima para los volúmenes alojados en el nodo seleccionado. El color representa la cantidad de regulación: Verde (ninguna), amarillo (limitado) o rojo (alto). Para más información, consulte el siguiente ejemplo de gráfico:
+
+.Expanda el ejemplo del gráfico
+[%collapsible]
+====
+image:node_throttling_range.PNG["Gráfico de limitación de nodos"]
+
+====
+Coloque el puntero del ratón en cualquier punto del gráfico para ver detalles de un momento específico.
+
+link:task-active-iq-qos-recommendations.html["Obtenga más información sobre las recomendaciones de calidad de servicio para un clúster"].
+
+
+NOTE: Desde la página aceleración de nodos, puede determinar si existe una devolución por QoS en un clúster de almacenamiento; consulte este tema https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/How_to_check_for_QoS_pushback_in_Element_Software["Artículo de base de conocimientos"^] para obtener más información.
+
+
+
+== Exportar datos de limitación de nodos
+
+Es posible exportar datos de gráficos a un formato de valores separados por comas (CSV). Solo se exporta la información que se muestra en el gráfico.
+
+.Pasos
+. En una vista de lista o un gráfico, seleccione la image:export_button.PNG["Botón Exportar"] .
+
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

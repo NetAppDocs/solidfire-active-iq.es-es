@@ -1,0 +1,52 @@
+---
+permalink: concept-active-iq-learn-about-active-iq.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, learn 
+summary: Más información sobre SolidFire Active IQ. 
+---
+= Más información sobre SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de empezar a usar SolidFire Active IQ, debe saber cómo funciona SolidFire Active IQ y qué información recopila.
+
+
+
+== Cómo funciona SolidFire Active IQ
+
+Servicios como el recopilador y la telemetría se ejecutan en un nodo de gestión. Estos servicios se configuran con acceso de solo lectura a un clúster y realizan llamadas API a un clúster de forma programada para recopilar las métricas de rendimiento, capacidad y estado clave. Esta información se carga en la base de datos en cloud de SolidFire Active IQ mediante HTTPS, donde se procesa y se pone a disposición del cliente y del equipo de soporte de NetApp a través de la interfaz de usuario de SolidFire Active IQ. Puede ver las cargas útiles de API y los intervalos de recopilación más recientes recibidos para un clúster en la interfaz de usuario de SolidFire Active IQ iniciando sesión con sus credenciales de SSO y seleccionando *Colección de API* en el menú desplegable *Informes*.
+
+link:https://activeiq.solidfire.com/["Access SolidFire Active IQ (se requiere inicio de sesión)"^]
+
+
+
+== Información recopilada por SolidFire Active IQ
+
+SolidFire Active IQ recopila información sobre volúmenes, clústeres, nodos, rendimiento y configuraciones:
+
+* ID de recursos como volumen, snapshots e ID de nodo de cuenta
+* Datos de rendimiento y capacidad para clústeres y volúmenes
+* Historial de errores y eventos
+* Versiones del software NetApp HCI y Element
+* Configuraciones de calidad de servicio (QoS)
+* Detalles del volumen como el tamaño, la fecha de creación, etc.
+* Configuraciones de sesión y grupo de acceso de volúmenes
+* Configuraciones de red de nodos y clústeres
+
+
+SolidFire Active IQ no recopila la siguiente información confidencial del cliente:
+
+* Datos de usuario final reales
+* Contraseñas
+* Secretos del protocolo de autenticación por desafío mutuo (CHAP)
+* Información del usuario administrador del clúster
+
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

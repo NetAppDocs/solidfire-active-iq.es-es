@@ -1,0 +1,115 @@
+---
+permalink: task-active-iq-enable-reporting.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, enable, reporting 
+summary: Obtenga información sobre cómo habilitar la funcionalidad de generación de informes de SolidFire Active IQ en el nodo de gestión. 
+---
+= Habilite la generación de informes de SolidFire Active IQ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe habilitar la funcionalidad de generación de informes de SolidFire Active IQ en el nodo de gestión, si todavía no lo hizo durante la instalación o la actualización, antes de que el servidor SolidFire Active IQ pueda recibir cargas útiles de datos para un clúster desde el nodo de gestión. Una vez que la conexión se haya configurado correctamente, el clúster envía información al servidor SolidFire Active IQ. Después, podrá ver el clúster en la interfaz de usuario de SolidFire Active IQ, que muestra información del clúster.
+
+
+NOTE: Los exploradores Google Chrome y Firefox se pueden ejecutar con SolidFire Active IQ.
+
+.Antes de empezar
+* Algunas funciones de Active IQ, por ejemplo, Quality of Service (QoS), requieren Element 11.3 o posterior para funcionar correctamente. Para confirmar que tiene la capacidad de utilizar todas las funciones de Active IQ, NetApp recomienda lo siguiente:
++
+** El clúster de almacenamiento ejecuta el software NetApp Element 11.3 o una versión posterior.
+** Un nodo de gestión se implementó con la versión 11.3 o posterior.
+
+
+* Tienes acceso a Internet. El servicio de recopilador Active IQ no se puede utilizar de sitios oscuros que no tienen conectividad externa.
+
+
+.Pasos
+. Obtenga el ID de activo base para la instalación:
++
+.. Abra la interfaz de usuario de la API DE REST del servicio de inventario en el nodo de gestión:
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
+.. Seleccione *autorizar* y complete lo siguiente:
++
+... Introduzca el nombre de usuario y la contraseña del clúster.
+... Introduzca el ID de cliente as `mnode-client`.
+... Seleccione *autorizar* para iniciar una sesión.
+... Cierre la ventana.
+
+
+.. En la interfaz de usuario DE LA API DE REST, seleccione *GET ​/Installations*.
+.. Seleccione *probar*.
+.. Seleccione *Ejecutar*.
+.. Del cuerpo de respuesta del código 200, copie el `id` para la instalación.
++
+[listing, subs="+quotes"]
+----
+{
+  "installations": [
+    {
+      "_links": {
+        "collection": "https://10.111.211.111/inventory/1/installations",
+        "self": "https://10.111.217.111/inventory/1/installations/abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x"
+      },
+      *"id": "abcd01e2-ab00-1xxx-91ee-12f111xxc7x0x",*
+----
++
+
+NOTE: Su instalación tiene una configuración de activos base que se creó durante la instalación o la actualización.
+
+
+
+. Activar telemetría:
++
+.. Acceda a la interfaz de usuario de API de servicio mnode en el nodo de gestión introduciendo la dirección IP del nodo de gestión seguida de `/mnode`:
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+.. Seleccione *autorizar* o cualquier icono de bloqueo y complete lo siguiente:
++
+... Introduzca el nombre de usuario y la contraseña del clúster.
+... Introduzca el ID de cliente as `mnode-client`.
+... Seleccione *autorizar* para iniciar una sesión.
+... Cierre la ventana.
+
+
+.. Configure el activo base:
++
+... Seleccione *PUT /assets/{asset_id}*.
+... Seleccione *probar*.
+... Introduzca lo siguiente en la carga útil de JSON:
++
+[listing]
+----
+{
+"telemetry_active": true
+"config": {}
+}
+----
+... Introduzca el ID base del paso anterior en *Asset_ID*.
+... Seleccione *Ejecutar*.
++
+El servicio Active IQ se reinicia automáticamente cada vez que cambian los activos. La modificación de activos produce un breve retraso antes de aplicar la configuración.
+
+
+
+
+
+
+
+. Inicie sesión en link:https://activeiq.solidfire.com/["SolidFire Active IQ"^] y confirme que puede ver los clústeres.
+
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

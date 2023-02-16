@@ -1,0 +1,99 @@
+---
+permalink: task_active_iq_replication.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, replication 
+summary: Obtenga información sobre la página Replication en SolidFire Active IQ. 
+---
+= Replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La página *Replication*, disponible en el panel lateral de un clúster seleccionado, proporciona información sobre pares de clústeres y pares de volúmenes.
+
+Obtenga más información acerca de las páginas de parejas de clústeres y parejas de volúmenes:
+
+* <<cluster_pairs,Parejas de clústeres>>
+* <<volume_pairs,Parejas de volúmenes>>
+
+
+
+
+== Parejas de clústeres
+
+En la página *Replication* > *Cluster Pairs* de un clúster seleccionado, puede ver la siguiente información acerca de pares de clústeres.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID de pareja de clústeres | El número de ID que se otorga cuando se creó la pareja de clústeres. 
+
+
+| Nombre de clúster remoto | El nombre del clúster remoto de la pareja. 
+
+
+| MVIP remota | La IP virtual de gestión del clúster remoto. 
+
+
+| Replicando volúmenes | Representa la cantidad de volúmenes que se replican en el clúster emparejado. 
+
+
+| Estado | Estado de la pareja de clústeres. 
+
+
+| UUID | Identificador único universal. 
+|===
+
+
+== Parejas de volúmenes
+
+En la página *replicación* > *pares de volúmenes* de un clúster seleccionado, puede ver la siguiente información acerca de pares de volúmenes.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del volumen | El número de ID que se indica cuando se creó el volumen. 
+
+
+| ID de cuenta | El ID de la cuenta asignada al volumen. 
+
+
+| Estado del volumen | El estado del volumen duplicado. 
+
+
+| Modo de replicación | El tipo de modo seleccionado para la pareja de volúmenes. 
+
+
+| Dirección  a| 
+Indica la dirección de los datos del volumen:
+
+* Source: Indica que los datos se escriben en un objetivo fuera del clúster.
+* Target: Indica que los datos se escriben en el volumen local de un origen externo.
+
+
+
+
+| Retraso asíncrono  a| 
+El tiempo transcurrido desde que el volumen se sincronizó por última vez con el clúster remoto. Si el volumen no se empareja, esto es nulo.
+
+
+NOTE: Un volumen de destino en el estado de replicación activa siempre tiene un retraso asíncrono de 0 (cero). Los volúmenes de destino tienen en cuenta los sistemas durante la replicación y asumen que el retraso asíncrono es preciso en todo momento.
+
+
+
+| Clúster remoto | El nombre del clúster remoto en el que reside el volumen. 
+
+
+| ID del volumen remoto | El ID de volumen del volumen en el clúster remoto. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

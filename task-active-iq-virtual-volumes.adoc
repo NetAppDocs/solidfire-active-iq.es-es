@@ -1,0 +1,223 @@
+---
+permalink: task-active-iq-virtual-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, virtual, volumes 
+summary: Obtenga información acerca de la página Virtual Volumes en SolidFire Active IQ. 
+---
+= Volúmenes virtuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la página *VVols*, disponible en el panel lateral de un clúster seleccionado, puede ver información sobre los volúmenes virtuales y sus contenedores de almacenamiento, extremos de protocolo, vinculaciones y hosts asociados.
+
+Obtenga más información sobre las tareas relacionadas con VVol:
+
+* <<Volúmenes virtuales>>
+* <<Contenedores de almacenamiento>>
+* <<Extremos de protocolo>>
+* <<Hosts>>
+* <<Vinculaciones>>
+
+
+
+
+== Volúmenes virtuales
+
+La página *VVols* > *Virtual Volumes* de un clúster seleccionado proporciona información acerca de cada volumen virtual activo en el clúster.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del volumen | El ID del volumen subyacente. 
+
+
+| ID de snapshot | El ID de la snapshot de volumen subyacente. El valor es cero si el volumen virtual no representa una snapshot de. 
+
+
+| ID del volumen virtual principal | El ID de volumen virtual del volumen virtual principal. Si el ID solo está formado por ceros, indica que el volumen virtual es independiente y no tiene ningún enlace a un volumen principal. 
+
+
+| ID del volumen virtual | El identificador único universal del volumen virtual. 
+
+
+| Nombre | El nombre asignado al volumen virtual. 
+
+
+| Tipo de SO invitado | El sistema operativo asociado con el volumen virtual. 
+
+
+| Tipo | El tipo de volumen virtual: Configuración, datos, memoria, intercambio u otro. 
+
+
+| Acceso | Los permisos de lectura/escritura asignados al volumen virtual. 
+
+
+| Tamaño | El tamaño del volumen virtual en gigabytes (GB) o gibibytes (GIB). 
+
+
+| Capacidad utilizada  a| 
+La capacidad utilizada actual del volumen:
+
+* Verde = hasta 80%
+* Amarillo = superior al 80%
+* Rojo = superior al 95%
+
+
+
+
+| Snapshot | El número de snapshots asociadas. Seleccione el número para establecer el enlace con los detalles de la copia de Snapshot. 
+
+
+| IOPS mín | El valor de configuración mínimo de calidad de servicio para IOPS del volumen virtual. 
+
+
+| Tasa máx. De IOPS | El valor de configuración máximo de calidad de servicio para IOPS del volumen virtual. 
+
+
+| IOPS de ráfaga | El valor de configuración máximo de calidad de servicio para ráfaga del volumen virtual. 
+
+
+| VMW_VMID | VMware define la información de los campos que van precedidos por "VMW_". Consulte la documentación de VMware para ver sus descripciones. 
+
+
+| Crear hora | El tiempo que se ha necesitado para completar la tarea de creación de volumen virtual. 
+
+
+| Acciones | Seleccione el menú desplegable vertical para obtener más detalles sobre un volumen virtual individual. 
+|===
+
+
+== Contenedores de almacenamiento
+
+En la página *VVols* > *Storage Containers* de un clúster seleccionado, puede ver la siguiente información para todos los contenedores de almacenamiento activos del clúster.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID de cuenta | El ID de la cuenta de asociada con el contenedor de almacenamiento. 
+
+
+| Nombre | El nombre del contenedor de almacenamiento. 
+
+
+| Estado  a| 
+El estado del contenedor de almacenamiento:
+
+* Active: El contenedor de almacenamiento está en uso.
+* Locked: El contenedor de almacenamiento está bloqueado.
+
+
+
+
+| Tipo PE | Indica el tipo de extremo de protocolo (SCSI es el único protocolo disponible para el software Element). 
+
+
+| ID del contenedor de almacenamiento | El identificador único universal (UUID) del contenedor de almacenamiento del volumen virtual. 
+
+
+| Volúmenes virtuales activos | El número de volúmenes virtuales activos asociados con el contenedor de almacenamiento. 
+|===
+
+
+== Extremos de protocolo
+
+La página *VVols* > *Protocol Endpoints* del clúster seleccionado proporciona información sobre el extremo de protocolo, como el ID del proveedor principal, el ID del proveedor secundario y el ID del extremo de protocolo.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del proveedor principal | El ID del proveedor de extremo de protocolo principal. 
+
+
+| ID del proveedor secundario | El ID del proveedor de extremo de protocolo secundario. 
+
+
+| ID de extremo de protocolo | El UUID del extremo de protocolo. 
+
+
+| Estado de extremo de protocolo  a| 
+El estado del extremo de protocolo:
+
+* Active: El extremo de protocolo está en uso.
+* Start: El extremo de protocolo se está iniciando.
+* Failover: El extremo de protocolo se conmutó al nodo de respaldo.
+* Reserved: El extremo de protocolo está reservado.
+
+
+
+
+| Tipo de proveedor | El tipo de proveedor del extremo de protocolo: Primario o secundario. 
+
+
+| ID DE DISPOSITIVO SCSI NAA | El identificador exclusivo de dispositivo SCSI para el extremo de protocolo a nivel global en el formato extendido registrado de NAA según la norma IEEE. 
+|===
+
+
+== Hosts
+
+La página *VVols* > *hosts* de un clúster seleccionado proporciona información acerca de los hosts VMware ESXi que alojan volúmenes virtuales.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del host | El UUID del host ESXi que aloja los volúmenes virtuales y es conocido para el clúster. 
+
+
+| Vinculaciones | Los ID de vinculación de todos los volúmenes virtuales que están vinculados por el host ESXi. 
+
+
+| ID del clúster ESX | El ID del clúster host de vSphere o GUID de vCenter. 
+
+
+| Los IQN del iniciador | Los IQN de iniciador para el host de volúmenes virtuales. 
+
+
+| ID de extremos de protocolo de SolidFire | Los extremos del protocolo que el host ESXi puede ver en ese momento. 
+|===
+
+
+== Vinculaciones
+
+La página *VVols* > *Bindings* de un clúster seleccionado proporciona información de enlace acerca de cada volumen virtual.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID del host | El UUID del host ESXi que aloja los volúmenes virtuales y es conocido para el clúster. 
+
+
+| ID de extremo de protocolo | El UUID del extremo de protocolo. 
+
+
+| Extremo de protocolo con ID de banda | El ID de dispositivo SCSI de NAA según el extremo de protocolo. 
+
+
+| Tipo de extremo de protocolo | Indica el tipo de extremo de protocolo (SCSI es el único protocolo disponible para el software Element). 
+
+
+| ID de enlace de VVol | El UUID de vinculación del volumen virtual. 
+
+
+| ID de VVol | El UUID del volumen virtual. 
+
+
+| ID secundario de VVol | El ID secundario del volumen virtual que es un ID de LUN de segundo nivel para SCSI. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

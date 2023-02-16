@@ -1,0 +1,55 @@
+---
+permalink: task_active_iq_drives.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, drives 
+summary: Obtenga más información acerca de la página unidades en SolidFire Active IQ. 
+---
+= Unidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cada nodo contiene una o varias unidades físicas, que se utilizan para almacenar una parte de los datos del clúster. El clúster utiliza la capacidad y el rendimiento de la unidad una vez que esta se ha añadido correctamente a un clúster.
+
+En la página *Drives*, disponible en el panel lateral para un clúster seleccionado, puede filtrar la página seleccionando de las fichas *Active*, *disponible* y *fallido*.
+
+La siguiente información se encuentra disponible para cada unidad del clúster en función del estado de la funcionalidad de la unidad:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID de unidad | El número secuencial asignado a la unidad. 
+
+
+| ID de nodo | El número de nodo asignado cuando el nodo se añade al clúster. 
+
+
+| ID de servicio | El ID de servicio actual del servicio de bloques o segmentos asociado con la unidad. 
+
+
+| Ranura | El número de ranura en la que la unidad se encuentra físicamente. 
+
+
+| Capacidad | El tamaño de gigabyte de la unidad. 
+
+
+| Versión de firmware | La versión del firmware en la unidad. 
+
+
+| Serie | El número de serie de la unidad SSD. 
+
+
+| Desgaste | Indicador de nivel de desgaste restante. 
+
+
+| Tipo | El tipo de unidad puede ser de bloque o metadatos. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

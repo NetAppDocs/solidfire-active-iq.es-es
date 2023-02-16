@@ -1,0 +1,97 @@
+---
+permalink: task-active-iq-view-solidfire-node-details.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, storage, node, details 
+summary: Obtenga información sobre la visualización de detalles del nodo de almacenamiento de SolidFire en SolidFire Active IQ. 
+---
+= Ver los detalles del nodo de almacenamiento SolidFire
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cada nodo es una colección de SSD. Cada nodo de almacenamiento incluye recursos de CPU, redes, caché y almacenamiento. Los recursos del nodo de almacenamiento se agrupan en un clúster de nodos.
+
+En la página *Nodes*, la barra de información proporciona una visión general rápida de los siguientes datos:
+
+* MVIP: Dirección IP virtual de gestión
+* MVIP VLAN ID: ID de LAN virtual para la MVIP
+* SVIP: Dirección IP virtual de almacenamiento
+* SVIP VLAN ID: ID de LAN virtual para la SVIP
+
+
+
+
+== Ver información sobre los nodos de almacenamiento
+
+La siguiente información está disponible para cada nodo de almacenamiento del clúster:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID | El ID que genera el sistema para el nodo. 
+
+
+| Estado  a| 
+El estado del nodo:
+
+* Healthy: El nodo no tiene errores críticos asociados.
+* Offline: No se puede acceder al nodo. Seleccione el vínculo para ver el registro de errores.
+* Falla: Existen errores asociados con este nodo. Seleccione el vínculo para ver el registro de errores.
+
+
+
+
+| Nombre | El nombre del nodo que genera el sistema. 
+
+
+| Tipo | Muestra el tipo de modelo del nodo. 
+
+
+| Versión | La versión del software Element que se ejecuta en cada nodo. 
+
+
+| Etiqueta de servicio | El número de etiqueta de servicio exclusivo que se asigna al nodo. 
+
+
+| Número de serie | El número de serie único que se asigna al nodo. 
+
+
+| IP de gestión | La dirección MIP de gestión asignada al nodo para tareas de administrador de red de 1 GbE o 10 GbE. 
+
+
+| IP del clúster | La dirección IP de clúster asignada al nodo que se usa para la comunicación entre nodos del mismo clúster. 
+
+
+| IP de almacenamiento | La dirección IP de almacenamiento asignada al nodo que se usa para la detección de redes iSCSI y todo el tráfico de red de datos. 
+
+
+| Puerto de replicación | El puerto que se usa en los nodos de para la replicación remota. 
+
+
+| Función  a| 
+Identifica el rol que tiene el nodo en el clúster:
+
+* Cluster Master: El nodo que realiza tareas administrativas para todo el clúster y contiene la MVIP y la SVIP.
+* Ensemble Node: Un nodo que participa en el clúster. Hay tres o cinco nodos de conjuntos, según el tamaño del clúster.
+* Fibre Channel: Un nodo FC en el clúster.
+
+
+
+
+| IOPS promedio en los últimos 30 minutos | Suma del número medio de IOPS ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como principal. 
+
+
+| Rendimiento medio en los últimos 30 minutos | Suma del rendimiento medio ejecutado en los últimos 30 minutos en todos los volúmenes que tienen este nodo como primario. 
+
+
+| Latencia media (µs): Últimos 30 minutos | Tiempo medio en microsegundos, medido en los últimos 30 minutos, para completar las operaciones de lectura y escritura en todos los volúmenes que tienen este nodo como principal. Para informar esta métrica en función de los volúmenes activos, solo se utilizan valores de latencia no cero. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

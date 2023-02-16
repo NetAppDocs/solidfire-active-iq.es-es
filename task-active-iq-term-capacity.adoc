@@ -1,0 +1,42 @@
+---
+permalink: task-active-iq-term-capacity.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, capacity, licensing 
+summary: Obtenga más información acerca de la página de licencias por capacidad de SolidFire Active IQ. 
+---
+= Capacidad a plazo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la página *term Capacity* de *All Clusters View*, puede ver información acerca del modelo de capacidad a plazo de NetApp.
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID de la compañía | ID de compañía asociado a la licencia. 
+
+
+| Nombre de la empresa | Nombre de la empresa asociada a la licencia. 
+
+
+| Licencias | Número de licencias en un entorno de cliente. 
+
+
+| De clúster | Número de clústeres y sus ID que pertenecen a un cliente. 
+
+
+| Capacidad con licencia | Cantidad de capacidad asignada en los nodos con licencia en un entorno del cliente. 
+
+
+| La capacidad consumida | La capacidad consumida actualmente por todos los clústeres que pertenecen a un cliente. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

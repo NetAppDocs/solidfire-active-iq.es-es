@@ -1,0 +1,118 @@
+---
+permalink: task-active-iq-snapshots-and-schedules.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, snapshot, details, schedule 
+summary: Obtenga más información sobre la visualización de los detalles de la snapshot y la programación de snapshots en SolidFire Active IQ. 
+---
+= Snapshots y programaciones de snapshots
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Obtenga información sobre las snapshots y las programaciones de las snapshots:
+
+* <<Snapshot>>
+* <<Programaciones de snapshots>>
+
+
+
+
+== Snapshot
+
+En la página *Volumes* que está disponible en el panel lateral de un clúster seleccionado, puede ver información acerca de las instantáneas de volumen.
+
+.Pasos
+. Seleccione *volúmenes* > *instantáneas*.
+. Como alternativa, seleccione *Volumes* > *Active Volumes* y, en la columna acciones, seleccione image:more_information.PNG["más información"] Icono para el volumen que desea y seleccione *Ver instantáneas*.
+. (Opcional) puede exportar la lista de snapshots como un archivo CSV seleccionando el image:export_button.PNG["botón exportar"] .
+
+
+La siguiente lista describe los detalles disponibles:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID | Muestra el ID de snapshot asignado a la copia de Snapshot. 
+
+
+| ID del volumen | El ID que se otorga cuando se creó el volumen. 
+
+
+| ID de cuenta | El ID de la cuenta asignada al volumen. 
+
+
+| UUID | Identificador único universal. 
+
+
+| Tamaño | El tamaño de la copia de Snapshot definido por el usuario. 
+
+
+| Tamaño del volumen | El tamaño del volumen a partir del cual se creó la copia de Snapshot. 
+
+
+| Crear hora | La hora en la que se ha creado la snapshot. 
+
+
+| Conserve hasta | La fecha y la hora en las que se eliminó la copia de Snapshot. 
+
+
+| ID de snapshot de grupo | El ID de grupo al que pertenece la copia de Snapshot si se agrupa junto con otras copias de Snapshot de volumen. 
+
+
+| Replicado  a| 
+Muestra el estado de la snapshot en el clúster de remoto:
+
+* Present: La copia de Snapshot existe en un clúster remoto.
+* Present: La copia de Snapshot no existe en un clúster remoto.
+* Syncing: El clúster de destino que está replicando en este momento la snapshot.
+* Deleted: El destino replicó la copia de Snapshot y después la eliminó.
+
+
+|===
+
+
+== Programaciones de snapshots
+
+En la página *Volumes* > *Snapshot Schedules* que está disponible en el panel lateral de un clúster seleccionado, puede ver los detalles de la programación de instantáneas.
+
+Puede exportar la lista de programaciones de Snapshot como un archivo CSV seleccionando el image:export_button.PNG["Botón Exportar"] .
+
+La siguiente lista describe los detalles disponibles:
+
+[cols="25,75"]
+|===
+| Título | Descripción 
+
+
+| ID | El ID de programa asignado a la programación. 
+
+
+| Nombre | El nombre de la programación asignado por el usuario. 
+
+
+| Frecuencia | La frecuencia con la que se ejecuta la programación. La frecuencia se puede establecer en horas y minutos, semanas o meses. 
+
+
+| Recurrente | Indica si la programación se repite o no. 
+
+
+| ID de volumen | Los ID de volumen incluidos en la snapshot programada. 
+
+
+| Última ejecución | La última vez que se ejecutó la programación. 
+
+
+| Estado de la última ejecución | El resultado de la última ejecución de la programación. Los posibles valores son los siguientes: `Success` o. `Error` 
+
+
+| Pausa manual | Identifica si la programación se pausó manualmente o no. 
+|===
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]
