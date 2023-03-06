@@ -17,6 +17,8 @@ Obtenga más información acerca de las páginas de parejas de clústeres y pare
 
 * <<cluster_pairs,Parejas de clústeres>>
 * <<volume_pairs,Parejas de volúmenes>>
+* <<snapmirror_endpoints,Extremos de SnapMirror>>
+* <<snapmirror_relationships,Relaciones de SnapMirror>>
 
 
 
@@ -94,6 +96,97 @@ NOTE: Un volumen de destino en el estado de replicación activa siempre tiene un
 |===
 
 
+== Extremos de SnapMirror
+
+En la página *Replication* > *SnapMirror Endpoints* de un clúster seleccionado, puede ver la siguiente información sobre los extremos de SnapMirror.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID de extremo | El número de identificación del punto final. 
+
+
+| Nombre de clúster remoto | El nombre del clúster remoto de la pareja. 
+
+
+| IP de gestión del clúster | Dirección IP de gestión del clúster. 
+
+
+| IPS | El rango de direcciones IP de red virtual que se utiliza para la red virtual. 
+
+
+| Relaciones | El número de relaciones configuradas para un extremo. 
+
+
+| Estado | Se refiere a si el extremo está conectado o no. Tiene un valor de *conectado* o *desconectado*. 
+|===
+
+
+== Relaciones de SnapMirror
+
+En la página *replicación* > *Relaciones de SnapMirror* de un clúster seleccionado, puede ver la siguiente información acerca de las relaciones de SnapMirror.
+
+[cols="30,70"]
+|===
+| Título | Descripción 
+
+
+| ID de extremo | El número de identificación del punto final. 
+
+
+| Volumen de origen | El ID de volumen del origen. 
+
+
+| Clúster de destino | El nombre del clúster de destino de la relación de SnapMirror. 
+
+
+| Volumen de destino | El nombre del volumen de destino en la relación de SnapMirror. 
+
+
+| Estado  a| 
+El estado de la relación de reflejo. Puede tener tres valores posibles:
+
+* Inicializado: El volumen de destino no está inicializado.
+* SnapMirror: El volumen de destino se inicializa y está listo para recibir actualizaciones de SnapMirror.
+* Broken-off: El volumen de destino está en estado de lectura/escritura y las snapshots están presentes.
+
+
+
+
+| Estado  a| 
+Si la relación es actualmente saludable, puede tener un valor de *saludable* o *poco saludable*.
+
+
+NOTE: Cuando una actualización manual o programada falla o se cancela, o la última actualización programada se retrasa, puede resultar en un valor *incorrecto*. El campo *Detalles* que sigue el estado muestra el motivo del estado *poco saludable*.
+
+
+
+| Tipo de relación  a| 
+El tipo de relación de SnapMirror.
+
+
+NOTE: En sistemas SolidFire, siempre está configurado en `extended_data_protection`. Los sistemas NetApp tienen otros tipos de relaciones válidas que no se aplican en el caso de los sistemas SolidFire.
+
+
+
+| Estado  a| 
+El estado del clúster:
+
+* Healthy: El clúster no tiene errores críticos asociados.
+* Offline: No se puede acceder al clúster. Seleccione el vínculo para ver el registro de errores.
+* Error: Existen errores asociados con este clúster. Seleccione el vínculo para ver el registro de errores.
+
+
+
+
+| Detalles | Información que ayuda a identificar la relación de SnapMirror. 
+|===
+
+
 == Obtenga más información
 
-https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]
+* https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]
+* https://docs.netapp.com/us-en/ontap/element-replication/index.html["Replicación entre software de NetApp Element y ONTAP"^]
+

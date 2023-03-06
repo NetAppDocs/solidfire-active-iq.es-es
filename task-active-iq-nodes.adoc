@@ -69,7 +69,7 @@ El estado del nodo:
 | Número de serie | El número de serie único que se asigna al nodo. 
 
 
-| IP de gestión | La dirección MIP de gestión asignada al nodo para tareas de administrador de red de 1 GbE o 10 GbE. 
+| IP de gestión | La dirección IP de gestión asignada al nodo para tareas de administrador de red 1 GbE o 10 GbE. 
 
 
 | IP del clúster | La dirección IP de clúster asignada al nodo que se usa para la comunicación entre nodos del mismo clúster. 
