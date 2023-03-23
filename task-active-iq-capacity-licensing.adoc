@@ -13,6 +13,8 @@ summary: Obtenga más información acerca de la página de licencias por capacid
 [role="lead"]
 En la página *licencias por capacidad* de *All Clusters View*, puede ver información acerca del modelo de licencias por capacidad de NetApp. Los clientes que utilizan dispositivos SolidFire estándar deben ignorar esta página.
 
+Para ver un pool de licencias de capacidad determinado, debe tener permisos para ver todos los clústeres incluidos en ese pool. Si hay relaciones de compañía padre e hijo implicadas, trabaje con su gestor de cuentas para confirmar que se ha registrado correctamente. De no hacerlo, puede provocar que el pool de licencias de capacidad no esté disponible.
+
 Las licencias por capacidad son una opción de licencia alternativa que ofrece NetApp. Obtenga información sobre o realice tareas relacionadas con licencias de capacidad:
 
 [cols="25,75"]
