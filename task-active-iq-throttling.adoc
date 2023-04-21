@@ -23,11 +23,18 @@ Obtenga información sobre cómo ver la información de limitación de nodo:
 
 == Ver gráficos y seleccionar intervalos de fechas
 
-Los gráficos y los rangos de fechas de SolidFire Active IQ se integran perfectamente entre sí. Al seleccionar un intervalo de fechas, todos los gráficos de esa página se ajustan al rango seleccionado. El rango de fechas predeterminado que se muestra para cada gráfico es siete días.
+Los gráficos y los rangos de fechas de SolidFire Active IQ se integran perfectamente entre sí. Al seleccionar un rango de fechas, los gráficos *Ajuste de nodos* y *Rendimiento de volumen total* de esa página se ajustan al rango seleccionado. El rango de fechas predeterminado que se muestra para cada gráfico es siete días. Cuando selecciona un nodo en las pestañas de selección de gráficos, estos gráficos cambian al nodo recién seleccionado.
 
 Puede seleccionar un intervalo de fechas del cuadro desplegable del calendario o de un conjunto de rangos predefinidos. Los intervalos de fechas se calculan utilizando la hora actual del explorador (en el momento de la selección) y la cantidad de tiempo configurada. Además, puede seleccionar el intervalo deseado cepillándose directamente sobre el gráfico de barras en la parte inferior. Puede cambiar entre gráficos seleccionando los diseños de miniaturas a la izquierda.
 
-Los gráficos muestran la aceleración de los nodos durante el período de tiempo seleccionado en función de la configuración de IOPS mínima y máxima para los volúmenes alojados en el nodo seleccionado. El color representa la cantidad de regulación: Verde (ninguna), amarillo (limitado) o rojo (alto). Para más información, consulte el siguiente ejemplo de gráfico:
+El gráfico *Node Throttling* muestra la limitación de nodos durante el período de tiempo seleccionado en función de la configuración de IOPS mínima y máxima para los volúmenes alojados en el nodo seleccionado. El color representa la cantidad de estrangulación:
+
+* Verde: El nodo no se está acelerando. Los volúmenes pueden realizar hasta sus IOPS máximas configuradas.
+* Amarillo: El nodo está experimentando una limitación. Los volúmenes se reducen de su configuración máxima de IOPS, pero siguen manteniendo el rendimiento al igual o por encima de su configuración mínima de IOPS.
+* Rojo: El nodo está experimentando un alto estrangulamiento. Cuando los volúmenes se aceleran de forma más grave, el rendimiento puede caer por debajo del valor mínimo de IOPS.
+
+
+El gráfico *Rendimiento total del volumen* muestra la suma del rendimiento de los volúmenes primarios para un nodo seleccionado. El gráfico muestra la suma del rendimiento de lectura y escritura del volumen. No incluye metadatos ni otro tráfico de nodo. También tiene en cuenta cuando los volúmenes están presentes en un nodo, lo que provoca una disminución en el rendimiento cuando se transfieren volúmenes de un nodo.
 
 .Expanda el ejemplo del gráfico
 [%collapsible]
