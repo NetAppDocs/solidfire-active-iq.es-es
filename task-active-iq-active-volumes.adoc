@@ -160,7 +160,7 @@ Muestra cómo está lleno el volumen:
 | 512e habilitado | Identifica si 512e está habilitado en un volumen. 
 
 
-| Acelerador de calidad de servicio | Identifica si el volumen se está acelerando debido a una alta carga en el nodo de almacenamiento principal. 
+| Acelerador de calidad de servicio | Representa la limitación actual del volumen. El valor no incluye la limitación histórica del volumen. 
 
 
 | ID del nodo principal | Nodo primario para este volumen. 
