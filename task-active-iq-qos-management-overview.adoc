@@ -11,12 +11,13 @@ summary: Obtenga información acerca de la página de gestión de la calidad de 
 
 
 [role="lead"]
-En la página *QoS Management*, disponible en el panel lateral de un clúster seleccionado, puede ver información sobre las recomendaciones de QoS y la limitación de los nodos de un clúster.
+En la página *QoS Management*, disponible en el panel lateral de un clúster seleccionado, puede ver información sobre recomendaciones de QoS, limitación y volúmenes para los nodos de un clúster.
 
-Aprenda a ver información sobre las recomendaciones de calidad de servicio y la limitación de un nodo seleccionado:
+Infórmese sobre cómo ver información sobre recomendaciones de calidad de servicio, la limitación y los volúmenes de un nodo seleccionado:
 
 * link:task-active-iq-recommendations.html["Recomendaciones"]
 * link:task-active-iq-throttling.html["Regulación de nodos"]
+* link:task-active-iq-busiest-volumes.html["Volúmenes más ocupados"]
 
 
 

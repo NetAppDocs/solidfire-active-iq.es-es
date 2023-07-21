@@ -1,0 +1,52 @@
+---
+permalink: task-active-iq-busiest-volumes.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, volumes, busiest 
+summary: Conozca la página de volúmenes más activos de SolidFire Active IQ. 
+---
+= Volúmenes más ocupados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Desde la página *QoS Management* > *volúmenes más ocupados*, disponible desde el panel lateral para un clúster seleccionado, puede ver los diez volúmenes con el rendimiento más alto para un nodo seleccionado y el intervalo de tiempo en el clúster.
+
+Obtenga más información sobre la visualización de la información de volumen más ocupado:
+
+* <<Ver gráficos y seleccionar intervalos de fechas>>
+* <<Exportar datos de nodo más ocupados>>
+
+
+
+
+== Ver gráficos y seleccionar intervalos de fechas
+
+Después de seleccionar el nodo en la lista desplegable, se muestran los diez volúmenes con el rendimiento más alto de ese nodo. Para cada volumen, puede ver los gráficos *Rendimiento*, *Tamaño promedio de E/S*, *IOPS* y *Latencia*; para ver el último gráfico, es posible que deba desplazarse hacia abajo por la página. Para cambiar entre volúmenes, seleccione los diseños de miniaturas a la izquierda. Al seleccionar un nodo diferente, estos gráficos cambian al nodo recién seleccionado.
+
+Los gráficos y los rangos de fechas de SolidFire Active IQ se integran perfectamente entre sí. Al seleccionar un rango de fechas, los gráficos de esa página se ajustan al rango seleccionado. El rango de fechas predeterminado que se muestra para cada gráfico es siete días. Puede seleccionar un intervalo de fechas del cuadro desplegable del calendario o de un conjunto de rangos predefinidos. También puede seleccionar un intervalo deseado cepillando directamente sobre el gráfico de barras de la parte inferior. Los intervalos de fechas se calculan utilizando la hora actual del explorador (en el momento de la selección) y la cantidad de tiempo configurada. Cuando cambia el rango de fechas seleccionado para un nodo, es posible que los diez volúmenes más ocupados que se muestran también cambien.
+
+.Expanda el ejemplo del gráfico
+[%collapsible]
+====
+image:busiest_volumes.PNG["Visualización gráfica de los volúmenes más ocupados"]
+
+====
+Coloque el puntero del ratón en cualquier punto del gráfico para ver detalles puntuales de las operaciones de lectura, escritura y total. Si no hay un volumen en el nodo durante parte del intervalo de tiempo seleccionado, se representa con una línea de puntos
+
+
+
+== Exportar datos de nodo más ocupados
+
+Es posible exportar datos de gráficos a un formato de valores separados por comas (CSV). Solo se exporta la información que se muestra en el gráfico.
+
+.Pasos
+. En una vista de lista o un gráfico, seleccione la image:export_button.PNG["Botón Exportar"] .
+
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

@@ -25,7 +25,7 @@ Obtenga información sobre cómo ver la información de limitación de nodo:
 
 Los gráficos y los rangos de fechas de SolidFire Active IQ se integran perfectamente entre sí. Al seleccionar un rango de fechas, los gráficos *Ajuste de nodos* y *Rendimiento de volumen total* de esa página se ajustan al rango seleccionado. El rango de fechas predeterminado que se muestra para cada gráfico es siete días. Cuando selecciona un nodo en las pestañas de selección de gráficos, estos gráficos cambian al nodo recién seleccionado.
 
-Puede seleccionar un intervalo de fechas del cuadro desplegable del calendario o de un conjunto de rangos predefinidos. Los intervalos de fechas se calculan utilizando la hora actual del explorador (en el momento de la selección) y la cantidad de tiempo configurada. Además, puede seleccionar el intervalo deseado cepillándose directamente sobre el gráfico de barras en la parte inferior. Puede cambiar entre gráficos seleccionando los diseños de miniaturas a la izquierda.
+Puede seleccionar un intervalo de fechas del cuadro desplegable del calendario o de un conjunto de rangos predefinidos. Los intervalos de fechas se calculan utilizando la hora actual del explorador (en el momento de la selección) y la cantidad de tiempo configurada. También puede seleccionar un intervalo deseado cepillando directamente sobre el gráfico de barras de la parte inferior. Para cambiar entre los gráficos, seleccione los diseños en miniatura a la izquierda.
 
 El gráfico *Node Throttling* muestra la limitación de nodos durante el período de tiempo seleccionado en función de la configuración de IOPS mínima y máxima para los volúmenes alojados en el nodo seleccionado. El color representa la cantidad de estrangulación:
 
@@ -39,7 +39,7 @@ El gráfico *Rendimiento total del volumen* muestra la suma del rendimiento de l
 .Expanda el ejemplo del gráfico
 [%collapsible]
 ====
-image:node_throttling_range.PNG["Gráfico de limitación de nodos"]
+image:node_throttling_range.PNG["Visualización gráfica para la limitación de nodos"]
 
 ====
 Coloque el puntero del ratón en cualquier punto del gráfico para ver detalles de un momento específico.
