@@ -55,12 +55,14 @@ La capacidad utilizada actual del volumen:
 
 
 | Acelerador de calidad de servicio  a| 
-Identifica si el volumen se está acelerando debido a una alta carga en el nodo de almacenamiento principal:
+Representa la limitación actual del volumen.
 
 * Verde = hasta 20%
 * Amarillo = superior al 20%
 * Rojo = superior al 80%
 
+
+El valor no incluye la limitación histórica del volumen.
 
 
 
@@ -112,12 +114,7 @@ Una vez que se abre la página para el volumen activo, puede ver los datos recie
 
 
 | Capacidad utilizada  a| 
-Muestra cómo está lleno el volumen:
-
-* Verde = hasta 80%
-* Amarillo = superior al 80%
-* Rojo = superior al 95%.
-
+Muestra cómo de lleno está el volumen.
 
 
 
