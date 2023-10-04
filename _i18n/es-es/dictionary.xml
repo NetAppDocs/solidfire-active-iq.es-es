@@ -461,7 +461,6 @@
   <block id="f698f67f5666aff10729d8a1cb1c14d2" category="cell">Disparador</block>
   <block id="601196b963688a67f39766583574efdb" category="cell">Configuración definida por el usuario que activó la alerta.</block>
   <block id="4d1c0d628f7187afcd0dbf03553e9365" category="section-title">Ver políticas de alerta</block>
-  <block id="36056ade5aa16b4101c0f4cf7927c138" category="paragraph">La página *Directivas* del menú desplegable *Alertas* en *All Clusters View* muestra la siguiente información de directiva para todos los clústeres.</block>
   <block id="002f7378a5fcfc2f66cfea851a7fd5f4" category="cell">Nombre de la directiva</block>
   <block id="ae1d52073742c822d33f127442660e95" category="cell">Nombre de la política de alertas definida por el usuario.</block>
   <block id="370ed24b10bc15a8ba6506396950587d" category="cell">La dirección de correo electrónico definida en la política de alertas.</block>
@@ -544,9 +543,7 @@
   <block id="ad5a54b96d86e967dc2a014c681f9377" category="list-text">Confirme la acción.</block>
   <block id="e5574d4f50cf65adfb39e54e1a5f5ab1" category="paragraph">La directiva se elimina del sistema de forma permanente.</block>
   <block id="685a82571a4b315892d300d3410d13b9" category="section-title">Permite ver clústeres suprimidos</block>
-  <block id="a5358ca3015b1305c6ef8a4f2ae99f44" category="paragraph">En la página *clústeres suprimidos* del menú desplegable *Alertas* dentro de la *Vista todos los clústeres*, puede ver una lista de clústeres que tienen notificaciones de alerta suprimidas.</block>
   <block id="0e3b63363a35e9f7a5dee72963106a92" category="paragraph">El soporte de NetApp o los clientes pueden suprimir notificaciones de alerta para un clúster al realizar mantenimiento. Cuando las notificaciones se suprimen para un clúster mediante la supresión de actualizaciones, no se envían alertas comunes que ocurren durante las actualizaciones. También hay una opción de supresión de alerta completa que detiene la notificación de alerta de un clúster durante un periodo especificado. Puede ver cualquier alerta de correo electrónico que no se envíe cuando se supriman las notificaciones en la página *Historial* del menú *Alertas*. Las notificaciones suprimidas se reanudan automáticamente después de que transcurra la duración definida. Puede finalizar la supresión temprana de las notificaciones seleccionando "reanudar notificaciones" en el menú desplegable.</block>
-  <block id="4a6a16c3e094da903bd21906ee24fcd6" category="paragraph">La siguiente información está disponible en la página *clústeres suprimidos*.</block>
   <block id="10133a314a85c1c1a92fa3e662cdda44" category="cell">El nombre de la empresa asignado al clúster.</block>
   <block id="d6ed36bb2b00046e0edf3d24b526b7ad" category="cell">Nombre del clúster</block>
   <block id="2bbc845892f400626baab5af687527c5" category="cell">Hora de inicio</block>
@@ -556,7 +553,6 @@
   <block id="57347427d54a8b3062a13502efbb0b39" category="paragraph">Indica el estado de una notificación de alerta:</block>
   <block id="4e5f06cf705243a2cf7308548afc1545" category="list-text">*Activo*: Supresión de notificaciones de alerta activa.</block>
   <block id="50530d3f54881ad7130c640aaca2dbae" category="list-text">*Futuro*: La supresión de notificaciones de alerta está programada para una fecha y hora futuras.</block>
-  <block id="2928a5c9dcc57c93a61ff231dce7d08e" category="cell">Seleccione la opción para suprimir o reanudar notificaciones para un clúster.</block>
   <block id="91b4bb4cfabe9824c1024d2207177139" category="section-title">Suprimir notificaciones de clúster</block>
   <block id="57829e1c527aadb9862b10c223954f81" category="paragraph">Puede suprimir notificaciones de alerta en el nivel del clúster para un solo clúster o varios clústeres para la fecha y la hora actuales o la programación para que comiencen en una fecha y hora futuras.</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Debe realizar una de las siguientes acciones:</block>
@@ -1124,4 +1120,17 @@
   <block id="86d684bea1d4ec8e7ab5dd525434db07" category="paragraph">Representa la limitación actual del volumen.</block>
   <block id="8affec94c4ca90859e2feacff861a492" category="paragraph">El valor no incluye la limitación histórica del volumen.</block>
   <block id="b58d6152d74cfc9445a90c470e4070bc" category="paragraph">Muestra cómo de lleno está el volumen.</block>
+  <block id="32082878b3285421b4e15f332218aaf4" category="paragraph">La página *Policies* del menú desplegable Alerts dentro de la vista All Clusters muestra la siguiente información de política para todos los clusters.</block>
+  <block id="3f35e5d4a65d2fabe1b0df43b7f95473" category="paragraph">En la página *Clusters suprimidos* del menú desplegable Alertas dentro de la vista Todos los clusters, puede ver una lista de clusters que tienen notificaciones de alerta suprimidas.</block>
+  <block id="b0375fa371accb0190cfd4697a3d3a72" category="paragraph">En la página *Clusters suprimidos*, tiene la opción de ver la siguiente información para supresiones *Pasadas*, *Activas* y *Futuras*. La opción *Pasado* muestra las supresiones que terminaron en los últimos 90 días.</block>
+  <block id="7b1255f8fdd0cb8751baee55621164e1" category="cell">Creado por</block>
+  <block id="85c70e46956e908554028a7cfb3c9bb3" category="cell">El nombre de usuario de la cuenta que creó la supresión.</block>
+  <block id="171f0707519d57cefcbb271e1ecffd3c" category="cell">Hora de creación</block>
+  <block id="37e9a8f9aba121bfbca96f517e2c6767" category="cell">Hora exacta en la que se creó la supresión.</block>
+  <block id="c94ff6ebc86390bffc57ed46a873a939" category="cell">Hora de actualización</block>
+  <block id="20e8cffa15ad2f6d665e2a2a6fd9cfd9" category="cell">Si la supresión se modificó después de su creación, ésta es la hora exacta a la que se cambió la supresión por última vez.</block>
+  <block id="2b7dabba0077abe3732e0418b048a56b" category="cell">Programado</block>
+  <block id="65041f578bcadcc7ac79c02dc07efcf6" category="paragraph">Indica si la supresión se programó cuando se creó:</block>
+  <block id="9f161b7d0108b4a5362af45388ad5756" category="list-text">*Verdadero*: Los valores de Hora y Hora de Inicio creados son los mismos.</block>
+  <block id="7167ed746d9c6278dbbbb2634f319107" category="list-text">*Falso*: Los valores de Hora y Hora de Inicio creados son diferentes.</block>
 </blocks>

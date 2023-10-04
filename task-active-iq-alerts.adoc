@@ -89,7 +89,7 @@ La lista siguiente describe los detalles que tienen a su disposición:
 
 == Ver políticas de alerta
 
-La página *Directivas* del menú desplegable *Alertas* en *All Clusters View* muestra la siguiente información de directiva para todos los clústeres.
+La página *Policies* del menú desplegable Alerts dentro de la vista All Clusters muestra la siguiente información de política para todos los clusters.
 
 La lista siguiente describe los detalles que tienen a su disposición:
 
@@ -277,11 +277,11 @@ La directiva se elimina del sistema de forma permanente.
 
 == Permite ver clústeres suprimidos
 
-En la página *clústeres suprimidos* del menú desplegable *Alertas* dentro de la *Vista todos los clústeres*, puede ver una lista de clústeres que tienen notificaciones de alerta suprimidas.
+En la página *Clusters suprimidos* del menú desplegable Alertas dentro de la vista Todos los clusters, puede ver una lista de clusters que tienen notificaciones de alerta suprimidas.
 
 El soporte de NetApp o los clientes pueden suprimir notificaciones de alerta para un clúster al realizar mantenimiento. Cuando las notificaciones se suprimen para un clúster mediante la supresión de actualizaciones, no se envían alertas comunes que ocurren durante las actualizaciones. También hay una opción de supresión de alerta completa que detiene la notificación de alerta de un clúster durante un periodo especificado. Puede ver cualquier alerta de correo electrónico que no se envíe cuando se supriman las notificaciones en la página *Historial* del menú *Alertas*. Las notificaciones suprimidas se reanudan automáticamente después de que transcurra la duración definida. Puede finalizar la supresión temprana de las notificaciones seleccionando "reanudar notificaciones" en el menú desplegable.
 
-La siguiente información está disponible en la página *clústeres suprimidos*.
+En la página *Clusters suprimidos*, tiene la opción de ver la siguiente información para supresiones *Pasadas*, *Activas* y *Futuras*. La opción *Pasado* muestra las supresiones que terminaron en los últimos 90 días.
 
 [cols="25,75"]
 |===
@@ -295,6 +295,15 @@ La siguiente información está disponible en la página *clústeres suprimidos*
 
 
 | Nombre del clúster | El nombre asignado al clúster. 
+
+
+| Creado por | El nombre de usuario de la cuenta que creó la supresión. 
+
+
+| Hora de creación | Hora exacta en la que se creó la supresión. 
+
+
+| Hora de actualización | Si la supresión se modificó después de su creación, ésta es la hora exacta a la que se cambió la supresión por última vez. 
 
 
 | Hora de inicio | La hora exacta a la que se inició la supresión de notificaciones o está programada para iniciarse. 
@@ -326,7 +335,13 @@ Indica el estado de una notificación de alerta:
 
 
 
-| Acciones | Seleccione la opción para suprimir o reanudar notificaciones para un clúster. 
+| Programado  a| 
+Indica si la supresión se programó cuando se creó:
+
+* *Verdadero*: Los valores de Hora y Hora de Inicio creados son los mismos.
+* *Falso*: Los valores de Hora y Hora de Inicio creados son diferentes.
+
+
 |===
 
 
