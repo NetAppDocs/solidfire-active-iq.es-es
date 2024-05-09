@@ -1133,4 +1133,18 @@
   <block id="65041f578bcadcc7ac79c02dc07efcf6" category="paragraph">Indica si la supresión se programó cuando se creó:</block>
   <block id="9f161b7d0108b4a5362af45388ad5756" category="list-text">*Verdadero*: Los valores de Hora y Hora de Inicio creados son los mismos.</block>
   <block id="7167ed746d9c6278dbbbb2634f319107" category="list-text">*Falso*: Los valores de Hora y Hora de Inicio creados son diferentes.</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legales</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Derechos de autor</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas comerciales</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, el logotipo de NETAPP y las marcas enumeradas en la página de marcas comerciales de NetApp son marcas comerciales de NetApp, Inc. Los demás nombres de empresas y productos son marcas comerciales de sus respectivos propietarios.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Estadounidenses</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Puede encontrar una lista actual de las patentes propiedad de NetApp en:</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de privacidad</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="cc8fa0bc9def74223eff98b04c920c7d" category="sidebar">SolidFire Active IQ de NetApp es una herramienta web que proporciona vistas históricas actualizadas continuamente de las estadísticas de todo el clúster. Puede configurar notificaciones para avisarle sobre eventos, umbrales o métricas especificados en un clúster para que se puedan abordar rápidamente cuando surjan. La herramienta Active IQ hace que supervise la capacidad y el rendimiento, además de estar informado sobre el estado del clúster sea fácil y se pueda acceder desde cualquier lugar.</block>
+  <block id="e79aba466781e2b47a4a51d4a5e2f1f7" category="sidebar">Avisos legales</block>
 </blocks>
