@@ -52,7 +52,13 @@ En la página *Dashboard* de *All Clusters View*, puede ver detalles estadístic
 
 
 | Última actualización | Hora y fecha en la que la actualización de clúster más reciente. 
+
+
+| Acciones | Opciones para solicitar soporte de actualización para un clúster, archivar un clúster y suprimir un clúster 
 |===
+
+NOTE: Si el clúster que está buscando no está disponible, tenga en cuenta que los clústeres que han estado inactivos durante 180 días o más se archivan automáticamente.  Comuníquese con el soporte para obtener más ayuda.
+
 
 
 == Obtenga más información

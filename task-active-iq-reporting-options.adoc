@@ -16,6 +16,7 @@ Obtenga más información sobre el menú desplegable *Informes* en el panel late
 * <<Capacidad>>
 * <<Eficiencia>>
 * <<Rendimiento>>
+* <<Utilización de nodos>>
 * <<Registro de errores>>
 * <<Eventos>>
 * <<Alertas>>
@@ -132,6 +133,14 @@ En la página *rendimiento* del menú desplegable *Informes* de un clúster sele
 
 
 
+== Utilización de nodos
+
+En la página *Utilización de nodos* del menú desplegable *Informes* de un clúster seleccionado, puede seleccionar y ver cada nodo.
+
+A partir de Element 12.8, la información de utilización del nodo está disponible como `nodeHeat` utilizando el `GetNodeStats` y `ListNodeStats` Métodos API.  El `nodeHeat` El objeto es un miembro de la `nodeStats` objeto y muestra información de utilización del nodo en función de la relación entre el total de IOPS primarios o el total de IOPS y el promedio de IOPS configurados a lo largo del tiempo.  El gráfico de utilización del nodo muestra esto como un porcentaje derivado de la métrica. `recentPrimaryTotalHeat` .
+
+
+
 == Registro de errores
 
 En la página *Registro de errores* del menú desplegable *Informes* de un clúster seleccionado, puede ver información sobre los errores resueltos o sin resolver que ha informado el clúster. Esta información se puede filtrar y exportar a un archivo de valores separados por comas (CSV). Para obtener más detalles sobre los niveles de gravedad, consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^].
@@ -179,7 +188,7 @@ Se informa de la siguiente información para el clúster seleccionado.
 
 == Eventos
 
-En la página *Eventos* del menú desplegable *Informes* de un clúster seleccionado, puede ver información sobre los eventos clave que se han producido en el clúster. Esta información se puede filtrar y exportar a un archivo CSV.
+En la página *Eventos* del menú desplegable *Informes* de un clúster seleccionado, puede seleccionar entre las pestañas *Eventos* y *gcEvents* para ver información sobre los eventos clave que han ocurrido en el clúster.  De forma predeterminada, al seleccionar *Eventos* se muestran todos los eventos excepto gcEvents para mejorar la legibilidad.  Para ver todos los eventos, incluidos gcEvents, seleccione la pestaña denominada *gcEvents*.  Esta información se puede filtrar y exportar a un archivo CSV.
 
 Se informa de la siguiente información para el clúster seleccionado.
 
@@ -194,7 +203,7 @@ Se informa de la siguiente información para el clúster seleccionado.
 | Hora del evento | La hora en la que ocurrió el evento. 
 
 
-| Tipo | Tipo de evento que se está registrando; por ejemplo, eventos de API o eventos de clon. Consulte https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^] si quiere más información. 
+| Tipo | El tipo de evento que se registra, por ejemplo, eventos de API, eventos de clonación o eventos de gc.  Ver el https://docs.netapp.com/us-en/element-software/index.html["Documentación del software Element"^] Para más información. 
 
 
 | Mensaje | Mensaje asociado con el evento. 

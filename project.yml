@@ -29,8 +29,12 @@ sidebar:
       entries:
       - title: Descripción general
         url: "/task-active-iq-all-clusters-view-overview.html"
-      - title: Consola Ver todos los clústeres
-        url: "/task-active-iq-all-clusters-view-dashboard.html"
+      - title: Todos los clústeres Ver panel de control
+        entries:
+        - title: Consola
+          url: "/task-active-iq-all-clusters-view-dashboard.html"
+        - title: Acciones de clúster
+          url: "/task-active-iq-cluster-options.html"
       - title: Alertas
         url: "/task-active-iq-alerts.html"
       - title: Licencias por capacidad
@@ -57,6 +61,8 @@ sidebar:
         url: "/task-active-iq-active-volumes.html"
       - title: Snapshots y programaciones de snapshots
         url: "/task-active-iq-snapshots-and-schedules.html"
+      - title: Rendimiento del volumen
+        url: "/task-active-iq-volume-performance.html"
     - title: Replicación
       url: "/task_active_iq_replication.html"
     - title: Volúmenes virtuales

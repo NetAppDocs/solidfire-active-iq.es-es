@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: solidfire, active, iq, nodes 
 summary: Obtenga información acerca de la página Active Nodes en SolidFire Active IQ. 
 ---
-= Nodos
+= Cabeza de nodos
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -63,6 +63,15 @@ El estado del nodo:
 | Tipo | Muestra el tipo de modelo del nodo. 
 
 
+| Versión de configuración de la plataforma | La versión de configuración del chasis en el que está funcionando. 
+
+
+| Versión BIOS | La versión del BIOS para el hardware de su nodo. 
+
+
+| Revisión del firmware de BMC | La revisión del firmware que se ejecuta actualmente en el controlador de administración de placa base (BMC). 
+
+
 | Versión | La versión del software Element que se ejecuta en el nodo. 
 
 
@@ -96,6 +105,15 @@ Identifica el rol que tiene el nodo en el clúster:
 * Si un nodo no tiene un rol, el valor se establece en - (guion).
 
 
+
+
+| Fin de disponibilidad | Fecha en la que los nodos ya no están disponibles para su compra, pero aún reciben soporte. 
+
+
+| Fin del soporte de hardware | Fecha en la que el hardware ya no recibe soporte. 
+
+
+| Fin del soporte de software | Fecha en la que el software ya no recibe soporte. 
 |===
 
 
@@ -151,6 +169,15 @@ El estado del nodo:
 | Número de serie | El número de serie único que se asigna al nodo. 
 
 
+| Versión de configuración de la plataforma | La versión de configuración del chasis en el que está funcionando. 
+
+
+| Versión BIOS | La versión del BIOS para el hardware de su nodo. 
+
+
+| Revisión del firmware de BMC | La revisión del firmware que se ejecuta actualmente en el controlador de administración de placa base (BMC). 
+
+
 | Versión | La versión del software Element que se ejecuta en el nodo. 
 
 
@@ -177,6 +204,15 @@ Identifica el rol que tiene el nodo en el clúster:
 * Si un nodo no tiene un rol, el valor se establece en - (guion).
 
 
+
+
+| Fin de disponibilidad | Fecha en la que los nodos ya no están disponibles para su compra, pero aún reciben soporte. 
+
+
+| Fin del soporte de hardware | Fecha en la que el hardware ya no recibe soporte. 
+
+
+| Fin del soporte de software | Fecha en la que el software ya no recibe soporte. 
 |===
 
 
@@ -207,7 +243,22 @@ Seleccione *Compute* para ver la siguiente información acerca de los nodos de c
 | IP del vCenter | La dirección IP de vCenter Server. 
 
 
+| Versión BIOS | La versión del BIOS para el hardware de su nodo. 
+
+
+| Revisión del firmware de BMC | La revisión del firmware que se ejecuta actualmente en el controlador de administración de placa base (BMC). 
+
+
 | IP de vMotion | La dirección IP de red de VMware vMotion del nodo de computación. 
+
+
+| Fin de disponibilidad | Fecha en la que los nodos ya no están disponibles para su compra, pero aún reciben soporte. 
+
+
+| Fin del soporte de hardware | Fecha en la que el hardware ya no recibe soporte. 
+
+
+| Fin del soporte de software | Fecha en la que el software ya no recibe soporte. 
 |===
 
 

@@ -394,7 +394,7 @@ Puede finalizar la supresión de alertas de clúster en los clústeres que se ap
 
 == Correo electrónico de notificación de alertas
 
-Los suscriptores de las alertas de SolidFire Active IQ reciben diferentes correos electrónicos de estado para cada alerta que se activa en el sistema. Hay tres tipos de correos electrónicos de estado asociados a las alertas:
+Los suscriptores a las alertas de SolidFire Active IQ reciben correos electrónicos de estado para cualquier alerta que se active en el sistema.  Hay tres tipos de correos electrónicos de estado asociados con las alertas:
 
 [cols="35,65"]
 |===
@@ -418,8 +418,13 @@ La línea de asunto del correo electrónico de alerta utiliza uno de los siguien
 * Error de alerta resuelto: `Resolved: [policy name] alert on [cluster name] ([severity])`
 
 
-El contenido del correo electrónico de notificación será similar al siguiente ejemplo:image:example_email.PNG["Correo electrónico de ejemplo"]
+[NOTE]
+====
+Varias notificaciones se agrupan en un solo correo electrónico con los errores más graves en la parte superior del correo electrónico, similar al siguiente ejemplo:
 
+image:email_notification.png["Correo electrónico de ejemplo"]
+
+====
 
 
 == Obtenga más información

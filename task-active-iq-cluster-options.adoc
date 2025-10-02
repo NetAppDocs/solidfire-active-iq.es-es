@@ -1,0 +1,47 @@
+---
+permalink: task-active-iq-cluster-options.html 
+sidebar: sidebar 
+keywords: solidfire, active, iq, dashboard, all, cluster, options, archive, suppress, upgrade 
+summary: Obtenga información sobre las acciones de clúster en SolidFire Active IQ. 
+---
+= Acciones de clúster
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la página *Panel de control* de la *Vista de todos los clústeres*, puede ver las opciones de soporte de clústeres asociados a su cuenta.
+
+.Pasos
+. Seleccione *Vista de todos los clústeres* > *Descripción general*.
+. En la columna *Acciones*, seleccione laimage:more_information.PNG["Más información"] Icono del clúster que desees.
+. Seleccione una de las siguientes opciones:
++
+.. *Solicitar soporte de actualización* envía una solicitud para una actualización del software del clúster.  Puede seleccionar el software del elemento, el firmware de almacenamiento, el firmware de cómputo o los servicios de administración del nodo de administración.  Ingresa tus datos de contacto, cualquier comentario y un tiempo para que te devuelvan la llamada.
++
+image:request_support.png["Solicitar soporte de actualización"]
+
+.. *Archivo Cluster* archiva el cluster.  Se abre una ventana que ofrece advertencias sobre los problemas relacionados con el archivado de un clúster que podría ser necesario desarchivar en una fecha posterior.
++
+image:archive_cluster2.png["Clúster de archivos"]
+
+.. *Suprimir clúster* detiene las alertas repetidas.  Usted elige el tipo de alerta, la hora de inicio y la duración.  También puede ver las reglas de supresión de alertas que se están ejecutando actualmente en esta ventana.
++
+image:suppress_cluster.png["Suprimir clúster"]
+
++
+Ver link:task-active-iq-alerts.html#suppress-cluster-notifications["Suprimir notificaciones de clúster"] Para más información.
+
+
+
+
+
+
+NOTE: Si el clúster que está buscando no está disponible, tenga en cuenta que los clústeres que han estado inactivos durante 180 días o más se archivan automáticamente.  Comuníquese con el soporte para obtener más ayuda.
+
+
+
+== Obtenga más información
+
+https://www.netapp.com/support-and-training/documentation/["Documentación de productos de NetApp"^]

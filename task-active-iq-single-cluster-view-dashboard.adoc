@@ -94,6 +94,11 @@ Expanda la barra de información seleccionando *Mostrar detalles* para mostrar e
 * VVol
 * Sesiones iSCSI
 * Total mín. De IOPS configurado
+* Reequilibrio de IOPS
++
+
+NOTE: A partir de los clústeres Element 12.8, se proporciona un campo adicional *Reequilibrio de IOPS*.  Si la opción para todo el clúster está habilitada, cada volumen muestra este parámetro.  El valor de este campo es verdadero o falso.  Este campo se utiliza para equilibrar las porciones según la carga real en lugar de las configuraciones mínimas de IOPS.
+
 
 
 
